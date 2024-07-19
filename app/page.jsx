@@ -22,7 +22,7 @@ export default function Home() {
           <Environment background>
             <mesh scale={100}>
               <sphereGeometry args={[50, 100, 100]} />
-              <meshBasicMaterial side={THREE.BackSide} color="#0d1067" />
+              <meshBasicMaterial side={THREE.BackSide} color="#1c1c85" />
             </mesh>
           </Environment>
 
