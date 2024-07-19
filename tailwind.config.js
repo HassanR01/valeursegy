@@ -14,8 +14,8 @@ module.exports = {
       },
       colors: {
         mainColor: "#221c65",
-        whiteColor: "#",
-        blackColor: "#",
+        priColor: "#e40af4",
+        whiteColor: "#FFF7FC",
       },
       fontFamily: {
         mainFont: ['Poppins']
