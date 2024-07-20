@@ -1,3 +1,4 @@
+import Header from "./components/main/Header";
 import "./globals.css";
 
 
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-mainColor h-screen">
+        <Header />
         {children}
       </body>
     </html>

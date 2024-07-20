@@ -10,12 +10,12 @@ export default function Home() {
 
   return (
     <>
-      <div className="image w-full h-[100vh] flex flex-col items-center justify-center">
+      <div className="image cursor-grab w-full h-[100vh] flex flex-col items-center justify-center">
         <Canvas shadows>
-          <PerspectiveCamera makeDefault position={[-2, 3, 3]} />
-          <OrbitControls maxDistance={3.5} minDistance={0.8} maxPolarAngle={1.2} />
+          <PerspectiveCamera makeDefault position={[0, 2, 6]} />
+          <OrbitControls maxDistance={6.5} minDistance={1} maxPolarAngle={1.2} />
           <directionalLight args={["#ffffff", 2]} position={[0, 5, 0]} shadow={5} />
-          <ambientLight />
+          <ambientLight intensity={1} />
           
           <Suspense fallback={<Loading />} >
             <Env />
