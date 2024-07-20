@@ -3,6 +3,8 @@ import { useGLTF } from '@react-three/drei'
 
 export function Env(props) {
     const { nodes, materials } = useGLTF('/plane.gltf')
+
+    
     return (
         <group {...props} dispose={null}>
             <group>
