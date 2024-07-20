@@ -57,9 +57,9 @@
 			"name":"Material",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.6376070976257324,
-					0.47352316975593567,
-					0.3515370190143585,
+					0.4061659574508667,
+					0.39063453674316406,
+					0.36106643080711365,
 					1
 				],
 				"metallicFactor":0.5272727012634277,
@@ -267,7 +267,7 @@
 		{
 			"bufferView":12,
 			"componentType":5126,
-			"count":8559,
+			"count":8535,
 			"max":[
 				0.7447025179862976,
 				0.406750351190567,
@@ -283,13 +283,13 @@
 		{
 			"bufferView":13,
 			"componentType":5126,
-			"count":8559,
+			"count":8535,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":14,
 			"componentType":5126,
-			"count":8559,
+			"count":8535,
 			"type":"VEC2"
 		},
 		{
@@ -442,80 +442,80 @@
 		},
 		{
 			"buffer":0,
-			"byteLength":102708,
+			"byteLength":102420,
 			"byteOffset":48714944,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":102708,
-			"byteOffset":48817652,
+			"byteLength":102420,
+			"byteOffset":48817364,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":68472,
-			"byteOffset":48920360,
+			"byteLength":68280,
+			"byteOffset":48919784,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":82752,
-			"byteOffset":48988832,
+			"byteOffset":48988064,
 			"target":34963
 		},
 		{
 			"buffer":0,
 			"byteLength":24384,
-			"byteOffset":49071584,
+			"byteOffset":49070816,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":24384,
-			"byteOffset":49095968,
+			"byteOffset":49095200,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":16256,
-			"byteOffset":49120352,
+			"byteOffset":49119584,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10368,
-			"byteOffset":49136608,
+			"byteOffset":49135840,
 			"target":34963
 		},
 		{
 			"buffer":0,
 			"byteLength":47040,
-			"byteOffset":49146976,
+			"byteOffset":49146208,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":47040,
-			"byteOffset":49194016,
+			"byteOffset":49193248,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":31360,
-			"byteOffset":49241056,
+			"byteOffset":49240288,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":36096,
-			"byteOffset":49272416,
+			"byteOffset":49271648,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":49308512,
+			"byteLength":49307744,
 			"uri":"socheck.bin"
 		}
 	]

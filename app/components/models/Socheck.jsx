@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Socheck(props) {
+export function Model(props) {
     const { nodes, materials } = useGLTF('/socheck.gltf')
     return (
         <group {...props} dispose={null}>
