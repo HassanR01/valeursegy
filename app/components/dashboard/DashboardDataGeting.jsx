@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import Loading from '../main/Loading'
 
 export default function DashboardDataGeting() {
     const [blogs, setBlogs] = useState(null)
@@ -33,14 +34,29 @@ export default function DashboardDataGeting() {
                 const Hcps = await resHcps.json()
                 setHcps(Hcps.hcps)
 
+                const Meetings = await resMeetings.json()
+                setMeetings(Meetings.meetings)
+
+                const Products = await resProducts.json()
+                setProducts(Products.products)
+
             } catch (error) {
                 console.log(error)
             } finally {
                 setIsLoading(false)
             }
         }
+
+        GetData()   
     }, [])
-    return (
-        <div>DashboardDataGeting</div>
-    )
+
+    if (isLoading) {
+        return <Loading />
+    } else {
+
+
+        return (
+            <div>DashboardDataGeting</div>
+        )
+    }
 }

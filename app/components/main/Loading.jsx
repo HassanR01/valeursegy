@@ -1,13 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
-import { Html, Loader } from '@react-three/drei'
 
 export default function Loading() {
     return (
-        <Html>
-            <div className="w-full h-[100vh] fixed z-[100] bg-black flex items-center justify-center">
-                <Loader />
-                <h2>Loading From Rockai Dev Server..</h2>
-            </div>
-        </Html>
+        <div className="w-full h-[100vh] fixed left-0 top-0 z-[100] bg-black flex items-center justify-center">
+            <Image src={'/loading.gif'} width={300} height={300} alt='loading' />
+        </div>
     )
 }

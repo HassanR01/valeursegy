@@ -1,12 +1,19 @@
 'use client'
-import { Environment, OrbitControls, PerspectiveCamera, ScrollControls } from "@react-three/drei";
+import { Environment, OrbitControls, PerspectiveCamera, useHelper } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Env } from "./components/models/Env";
-import { Suspense, useRef } from "react";
-import * as THREE from "three"
+import { Suspense, useEffect, useRef, useState } from "react";
 import Loading from "./components/main/Loading";
+import { PointLight, PointLightHelper, SpotLightHelper } from "three";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+
+  useEffect(() => {
+
+  }, [])
+
 
   return (
     <>
@@ -14,12 +21,18 @@ export default function Home() {
         <Canvas shadows>
           <PerspectiveCamera makeDefault position={[0, 2, 6]} />
           <OrbitControls maxDistance={6.5} minDistance={1} maxPolarAngle={1.2} />
-          <directionalLight args={["#ffffff", 2]} position={[0, 5, 0]} shadow={5} />
-          <ambientLight intensity={1} />
           
-          <Suspense fallback={<Loading />} >
-            <Env />
-          </Suspense>
+          <Environment preset="sunset"/>
+
+
+          <hemisphereLight
+            skyColor={"#99ccff"}
+            groundColor={"#6699ff"}
+            intensity={1}
+            position={[0, 50, 0]}
+          />
+
+          <Env />
 
         </Canvas>
       </div>
