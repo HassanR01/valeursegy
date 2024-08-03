@@ -1,8 +1,14 @@
 'use client'
-import React from 'react'
+import { motion } from 'framer-motion'
+import React, { useState } from 'react'
 
-export default function BlogsSection({blogs}) {
-  return (
-    <div>BlogsSection</div>
-  )
+
+export default function BlogsSection({ blogs }) {
+    const [addUserForm, setAddUserForm] = useState(false)
+
+    return (
+        <>
+            
+        </>
+    )
 }

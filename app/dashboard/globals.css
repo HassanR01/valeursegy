@@ -5,3 +5,29 @@
 header {
     display: none !important;
 }
+
+form {
+    @apply w-full flex flex-col items-center justify-center py-8
+}
+
+form .fRow {
+    @apply w-full flex flex-wrap items-center justify-center
+}
+
+form .fRow div {
+    @apply flex items-start flex-col justify-center m-3
+}
+
+label {
+    @apply font-semibold text-lg text-whiteColor mb-2
+}
+
+input,
+select,
+textarea {
+    @apply w-[300px] outline-none bg-whiteColor text-black font-medium duration-700 p-2 rounded-tl-xl rounded-br-xl focus:border focus:border-green-500
+}
+
+button.btnForm {
+    @apply w-[300px] bg-whiteColor text-mainColor my-6 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400
+}

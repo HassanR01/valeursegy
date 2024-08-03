@@ -17,7 +17,7 @@ export default function DashboardDataGeting() {
     const [products, setProducts] = useState(null)
     const [users,setUsers] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
-    const [section, setSection] = useState('Analysis')
+    const [section, setSection] = useState('Users')
 
     useEffect(() => {
         const GetData = async () => {
@@ -74,7 +74,7 @@ export default function DashboardDataGeting() {
 
         return (
             <>
-                <div className="menu flex items-center justify-between flex-col bg-white p-4 w-[10%] h-screen">
+                <div className="menu flex items-center justify-between flex-col bg-white p-4 w-[10%] h-screen rounded-r-xl">
                     <div className="logo">
                         <Link href={'/'} >
                             <Image src={'/logo.png'} width={120} height={120} alt='logo' />
@@ -99,7 +99,7 @@ export default function DashboardDataGeting() {
                     <>
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Analysis</h3>
-                            <AnalysisSection blogs={problogs} hcps={hcps} meetings={meetings} products={products} />
+                            <AnalysisSection blogs={blogs} hcps={hcps} meetings={meetings} products={products} />
                         </section>
                     </>
                 )}
