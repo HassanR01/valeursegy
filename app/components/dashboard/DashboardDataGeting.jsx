@@ -76,9 +76,9 @@ export default function DashboardDataGeting() {
             <>
                 <div className="menu flex items-center justify-between flex-col bg-white p-4 w-[10%] h-screen rounded-r-xl">
                     <div className="logo">
-                        <Link href={'/'} >
+                        <a href={'/'} >
                             <Image src={'/logo.png'} width={120} height={120} alt='logo' />
-                        </Link>
+                        </a>
                     </div>
                     <nav>
                         <ul>

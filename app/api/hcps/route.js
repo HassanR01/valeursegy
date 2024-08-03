@@ -11,6 +11,6 @@ export async function POST(req){
 
 export async function GET() {
     await connectMongoDB()
-    const hsps = await HCP.find()
-    return NextResponse.json({hsps})
+    const hcps = await HCP.find()
+    return NextResponse.json({hcps})
 }

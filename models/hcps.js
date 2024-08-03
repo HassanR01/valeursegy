@@ -7,7 +7,6 @@ const hcpSchema = new Schema({
     medId: String,
     phone: String,
     speciality: String,
-    // noted
 })
 
 const HCP = mongoose.models.HCP || mongoose.model('HCP', hcpSchema)

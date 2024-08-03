@@ -4,11 +4,26 @@ import React, { useState } from 'react'
 
 
 export default function BlogsSection({ blogs }) {
-    const [addUserForm, setAddUserForm] = useState(false)
+    const [addBlogForm, setAddBlogForm] = useState(false)
 
     return (
         <>
-            
+            {addBlogForm ? (
+                <>
+                    <motion.form
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.7 }}
+                        onChange={() => setAlert('')}
+                        onSubmit={handleAddUser}
+                    >
+                        
+                    </motion.form>
+                </>
+            ) : (
+                    <>
+                        </>
+            )}
         </>
     )
 }

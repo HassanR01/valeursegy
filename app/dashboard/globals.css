@@ -31,3 +31,13 @@ textarea {
 button.btnForm {
     @apply w-[300px] bg-whiteColor text-mainColor my-6 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400
 }
+
+td,
+th {
+    padding: 8px;
+    text-align: start;
+}
+
+table thead {
+    background-color: azure;
+}
