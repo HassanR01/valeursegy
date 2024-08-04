@@ -3,6 +3,7 @@ import mongoose, { Schema } from "mongoose";
 const blogSchema = new Schema({
     title: String,
     keywords: String,
+    image: String,
     description: String,
     sections: [], // image, subTitle , text
     writer: String,

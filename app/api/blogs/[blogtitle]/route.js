@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 
 export async function PUT(req, { params }) {
     const { blogtitle } = params
-    const { title, keywords, description, sections, writer } = await req.json()
+    const { title, keywords,image, description, sections, writer } = await req.json()
     await connectMongoDB()
     await Blog.findOneAndUpdate({ title: blogtitle }, { title, keywords, description, sections, writer })
     return NextResponse.json({ message: 'Blog Updated' }, { status: 200 })

@@ -1,11 +1,31 @@
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Env(props) {
     const group = useRef()
-    const { nodes, materials, animations } = useGLTF('/env.gltf')
+    const { nodes, materials, animations } = useGLTF('/plane.gltf')
     const { actions } = useAnimations(animations, group)
+
+    useEffect(() => {
+        // Assuming the animation name is "Action" or the desired animation name.
+        // Replace "Action" with the correct name if needed.
+        const actionName = Object.keys(actions)[0] // Get the first animation name
+        const action = actions[actionName]
+
+        if (action) {
+            action.play() // Start the animation
+        }
+
+        // Optionally return a cleanup function to stop the animation
+        return () => {
+            if (action) {
+                action.stop()
+            }
+        }
+    }, [actions])
+
+
     return (
         <group ref={group} {...props} dispose={null}>
             <group name="Scene">
@@ -15,8 +35,8 @@ export function Env(props) {
                     receiveShadow
                     geometry={nodes.Plane005.geometry}
                     material={materials['Material.020']}
-                    position={[-1.013, -0.01, -0.598]}
-                    scale={3.034}
+                    position={[-3.91, -0.01, -1.266]}
+                    scale={10.486}
                 />
                 <mesh
                     name="Circle009"
@@ -91,7 +111,7 @@ export function Env(props) {
                         material={materials['Material.026']}
                     />
                 </group>
-                <group name="Cube066" position={[0.29, 0.391, -1.212]} scale={[2.165, 2.018, 2.165]}>
+                <group name="Cube066" position={[0.29, 0.498, -1.212]} scale={[2.165, 2.018, 2.165]}>
                     <mesh
                         name="Cube066_1"
                         castShadow
@@ -192,7 +212,7 @@ export function Env(props) {
                     receiveShadow
                     geometry={nodes.Cube075.geometry}
                     material={nodes.Cube075.material}
-                    position={[1.138, -0.004, 0.526]}
+                    position={[1.548, 0.154, -1.979]}
                     scale={2.165}
                 />
                 <mesh
@@ -201,7 +221,7 @@ export function Env(props) {
                     receiveShadow
                     geometry={nodes.Cube076.geometry}
                     material={nodes.Cube076.material}
-                    position={[1.138, -0.004, 0.526]}
+                    position={[1.853, 0.154, -1.91]}
                     scale={2.165}
                 />
                 <mesh
@@ -210,7 +230,8 @@ export function Env(props) {
                     receiveShadow
                     geometry={nodes.Cube077.geometry}
                     material={nodes.Cube077.material}
-                    position={[1.138, -0.004, 0.526]}
+                    position={[-2.136, 0.249, 2.227]}
+                    rotation={[0, 0.3, 0]}
                     scale={2.165}
                 />
                 <mesh
@@ -219,7 +240,8 @@ export function Env(props) {
                     receiveShadow
                     geometry={nodes.Cube078.geometry}
                     material={nodes.Cube078.material}
-                    position={[1.138, -0.004, 0.526]}
+                    position={[-2.305, 0.116, 2.273]}
+                    rotation={[0, 0.3, 0]}
                     scale={2.165}
                 />
                 <mesh
@@ -228,7 +250,8 @@ export function Env(props) {
                     receiveShadow
                     geometry={nodes.Cube079.geometry}
                     material={nodes.Cube079.material}
-                    position={[1.138, -0.004, 0.526]}
+                    position={[-2.111, 0.116, 2.028]}
+                    rotation={[0, 0.3, 0]}
                     scale={2.165}
                 />
                 <mesh
@@ -503,26 +526,6 @@ export function Env(props) {
                         material={materials['Material.012']}
                     />
                 </group>
-                <group
-                    name="Cube001"
-                    position={[-1.897, 0.342, -0.355]}
-                    rotation={[0, 0.216, 0]}
-                    scale={[1.905, 1.98, 1.905]}>
-                    <mesh
-                        name="Cube001_1"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Cube001_1.geometry}
-                        material={materials['Material.005']}
-                    />
-                    <mesh
-                        name="Cube001_2"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Cube001_2.geometry}
-                        material={materials['Material.016']}
-                    />
-                </group>
                 <group name="Sphere002" position={[-0.948, -0.004, 1.709]} scale={2.165}>
                     <mesh
                         name="Sphere001_1"
@@ -665,6 +668,26 @@ export function Env(props) {
                     position={[2.048, 0.255, 1.183]}
                     scale={[2.383, 4.106, 2.383]}
                 />
+                <group
+                    name="Cube001"
+                    position={[-2.001, 0.443, -0.327]}
+                    rotation={[0, 0.171, 0]}
+                    scale={[2.067, 1.926, 2.067]}>
+                    <mesh
+                        name="Cube025_1"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Cube025_1.geometry}
+                        material={materials['Material.005']}
+                    />
+                    <mesh
+                        name="Cube025_2"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Cube025_2.geometry}
+                        material={materials['Material.016']}
+                    />
+                </group>
                 <mesh
                     name="Curve001"
                     castShadow
@@ -1204,4 +1227,4 @@ export function Env(props) {
     )
 }
 
-useGLTF.preload('/env.gltf')
+useGLTF.preload('/plane.gltf')

@@ -23,12 +23,16 @@ label {
 }
 
 input,
-select,
-textarea {
+select {
     @apply w-[300px] outline-none bg-whiteColor text-black font-medium duration-700 p-2 rounded-tl-xl rounded-br-xl focus:border focus:border-green-500
 }
 
-button.btnForm {
+textarea {
+        @apply w-full h-[150px] outline-none bg-whiteColor text-black font-medium duration-700 p-2 rounded-tl-xl rounded-br-xl focus:border focus:border-green-500
+
+}
+
+.btnForm {
     @apply w-[300px] bg-whiteColor text-mainColor my-6 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400
 }
 
