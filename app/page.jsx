@@ -21,7 +21,7 @@ export default function Home() {
         <Canvas shadows>
           <PerspectiveCamera makeDefault position={[0, 5, 5]} />
           <OrbitControls maxDistance={10} minDistance={1} maxPolarAngle={1.2} />
-          
+          <fog attach='fog' color="#1d1a73" near={2} far={20} />
           <Env />
 
         </Canvas>
