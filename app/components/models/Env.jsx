@@ -8,16 +8,14 @@ export function Env(props) {
     const { actions } = useAnimations(animations, group)
 
     useEffect(() => {
-        // Assuming the animation name is "Action" or the desired animation name.
-        // Replace "Action" with the correct name if needed.
-        const actionName = Object.keys(actions)[0] // Get the first animation name
+
+        const actionName = Object.keys(actions)[0]
         const action = actions[actionName]
 
         if (action) {
-            action.play() // Start the animation
+            action.play()
         }
 
-        // Optionally return a cleanup function to stop the animation
         return () => {
             if (action) {
                 action.stop()
@@ -27,7 +25,43 @@ export function Env(props) {
 
 
     return (
-        <group ref={group} {...props} dispose={null}>
+        <group ref={group} {...props} dispose={null} position={[0, 0 ,-0.8]}>
+            <ambientLight intensity={1.5} color={"#ffffff"} />
+
+            {/* Directional light with shadows */}
+            <directionalLight
+                intensity={0.7}
+                castShadow={true}
+                position={[200, 300, 300]}
+                shadow-mapSize-width={2048}  // Increase shadow map size for better quality
+                shadow-mapSize-height={2048}
+                shadow-camera-far={1000}     // Adjust camera distance for better coverage
+                shadow-camera-near={0.5}
+                shadow-camera-left={-100}
+                shadow-camera-right={100}
+                shadow-camera-top={100}
+                shadow-camera-bottom={-100}
+                shadow-bias={-0.00005}       // Adjust bias to minimize shadow acne and lines
+                shadow-radius={3}            // Soft shadows by increasing the shadow radius
+            />
+
+            <directionalLight
+                intensity={5.5}
+                castShadow={true}
+                color={"#ffffff"}
+                position={[0, 120, 0]}
+                shadow-mapSize-width={2048}
+                shadow-mapSize-height={2048}
+                shadow-camera-far={1000}
+                shadow-camera-near={0.5}
+                shadow-camera-left={-100}
+                shadow-camera-right={100}
+                shadow-camera-top={100}
+                shadow-camera-bottom={-100}
+                shadow-bias={-0.00005}
+                shadow-radius={3}
+            />
+
             <group name="Scene">
                 <mesh
                     name="Plane005"

@@ -19,19 +19,9 @@ export default function Home() {
     <>
       <div className="image cursor-grab w-full h-[100vh] flex flex-col items-center justify-center">
         <Canvas shadows>
-          <PerspectiveCamera makeDefault position={[0, 2, 6]} />
-          <OrbitControls maxDistance={6.5} minDistance={1} maxPolarAngle={1.2} />
+          <PerspectiveCamera makeDefault position={[0, 5, 5]} />
+          <OrbitControls maxDistance={10} minDistance={1} maxPolarAngle={1.2} />
           
-          <Environment preset="sunset"/>
-
-
-          <hemisphereLight
-            skyColor={"#99ccff"}
-            groundColor={"#6699ff"}
-            intensity={1}
-            position={[0, 50, 0]}
-          />
-
           <Env />
 
         </Canvas>
