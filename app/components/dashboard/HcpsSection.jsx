@@ -18,7 +18,7 @@ export default function HcpsSection({ hcps }) {
           </thead>
           <tbody>
             {hcps.map((hcp, ind) => (
-              <tr key={ind}>
+              <tr className='text-whiteColor cursor-pointer hover:bg-priColor duration-700' key={ind}>
                 <td>{hcp.name}</td>
                 <td>{hcp.email}</td>
                 <td>{hcp.medId}</td>

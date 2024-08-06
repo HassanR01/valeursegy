@@ -20,7 +20,7 @@ export default function MeetingSection({ meetings }) {
           </thead>
           <tbody>
             {meetings.map((meetings, ind) => (
-              <tr key={ind}>
+              <tr className='text-whiteColor cursor-pointer hover:bg-priColor duration-700' key={ind}>
                 <td>{meetings.name}</td>
                 <td>{meetings.email}</td>
                 <td>{meetings.phone}</td>

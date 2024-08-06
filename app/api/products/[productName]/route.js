@@ -17,3 +17,9 @@ export async function GET(req, { params }) {
     return NextResponse.json({product})
 }
 
+export async function DELETE(req, { params }) {
+    const { productName } = params
+    await connectMongoDB()
+    await Product.findOneAndDelete({ name: productName })
+    return NextResponse.json({message: "Deleted Successfully"}, {status: 200}) 
+}

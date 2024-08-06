@@ -17,7 +17,7 @@ export default function DashboardDataGeting() {
     const [products, setProducts] = useState(null)
     const [users,setUsers] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
-    const [section, setSection] = useState('Blogs')
+    const [section, setSection] = useState('Products')
 
     useEffect(() => {
         const GetData = async () => {

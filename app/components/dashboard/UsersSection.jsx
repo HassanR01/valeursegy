@@ -103,14 +103,26 @@ export default function UsersSection({ users }) {
               transition={{ duration: 0.7 }}
               className="usersList py-8 w-full flex flex-wrap items-center justify-center"
             >
-              {users.map((user, ind) => (
-                <div className="user p-4 bg-whiteColor w-[200px] text-black flex flex-col items-start justify-start rounded-xl" key={ind}>
-                  <h3 className='text-lg font-medium'>{user.name}</h3>
-                  <h3 className='text-lg font-medium'>{user.username}</h3>
-                  <h3 className='text-lg font-medium'>{user.password}</h3>
-                  <h3 className='text-lg font-medium'>Role: {user.role}</h3>
-                </div>
-              ))}
+              <table className='w-full'>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {users.map((user, ind) => (
+                    <tr className='text-whiteColor cursor-pointer hover:bg-priColor duration-700' key={ind}>
+                      <td>{user.name}</td>
+                      <td>{user.username}</td>
+                      <td>{user.password}</td>
+                      <td>{user.role}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
           </motion.div>
         </>
       )}

@@ -74,12 +74,69 @@ const [alert, setAlert] = useState('')
     }
 
 
+    // Handle Edit Blog
+    const [editForm, setEditForm] = useState(false)
+    const [blogId, setBlogId] = useState('')
+
+    const handleEditBlog = async (e) => {
+        e.preventDefault()
+        setAlert('Processing..')
+        if (title && keywords && image && description && sections && writer) {
+            try {
+                const res = await fetch(`/api/blogs/${title}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify({ title, keywords, image, description, sections, writer })
+                })
+
+                if (res.ok) {
+                    setAlert('Editted Successfully')
+                    location.reload()
+                } else {
+                    setAlert('Technecal Issue')
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        } else {
+            setAlert('All Data Required')
+        }
+    }
+
+    // Handle Delete Blog
+    const DeleteBlog = async () => {
+        if (confirm('You will Delete The Blog')) {
+            try {
+                const res = await fetch(`/api/blogs/${title}`, {
+                    method: "DELETE"
+                })
+
+                if (res.ok) {
+                    location.reload()
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }
+
 
     // title, keywords,image, description, sections, writer
 
     return (
         <>
-            <div onClick={() => setAddBlogForm(!addBlogForm)} className={`ShowBtn fixed bottom-5 right-5 p-3 cursor-pointer bg-whiteColor rounded-xl ${addBlogForm ? "text-green-500" : "text-bgColor"}`}>
+            <div onClick={() => {
+                setAddBlogForm(!addBlogForm)
+                setEditForm(false)
+                settitle('')
+                setkeywords('')
+                setImage('')
+                setdescription('')
+                setSections([])
+                setwriter('')
+            }} className={`ShowBtn fixed bottom-5 right-5 p-3 cursor-pointer bg-whiteColor rounded-xl ${addBlogForm ? "text-green-500" : "text-bgColor"}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7">   <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" /> </svg>
             </div>
 
@@ -90,7 +147,7 @@ const [alert, setAlert] = useState('')
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.7 }}
                         onChange={() => setAlert('')}
-                        onSubmit={HandleAddBlog}
+                        onSubmit={editForm? handleEditBlog: HandleAddBlog}
                     >
                         <div className="fRow">
                             <div className="title">
@@ -135,8 +192,9 @@ const [alert, setAlert] = useState('')
                             <div className="btnForm cursor-pointer" onClick={() => updateSections()}>Add Section</div>
                         </div>
                         <h4 className='text-lg font-medium text-red-500 text-center'>{alert}</h4>
-                        <button className="btnForm">Add Blog</button>
+                        <button className="btnForm">{editForm ? "Edit Blog" : "Add Blog"}</button>
                     </motion.form>
+                        {editForm && (<button onClick={() => DeleteBlog()} className="btnDelete">Delete Blog</button>)}
                 </>
             ) : (
                     <>
@@ -147,7 +205,21 @@ const [alert, setAlert] = useState('')
                             className="BlogsList py-8 w-full flex flex-wrap items-center justify-center"
                         >
                             {blogs.map((blog, ind) => (
-                                <div className="blog overflow-hidden cursor-pointer m-4 bg-whiteColor w-[300px] text-black flex flex-col items-start justify-start rounded-xl" key={ind}>
+                                <div
+                                    onClick={() => {
+                                        setBlogId(blog._id)
+                                        settitle(blog.title)
+                                        setkeywords(blog.keywords)
+                                        setImage(blog.image)
+                                        setdescription(blog.description)
+                                        setSections(blog.sections)
+                                        setwriter(blog.writer)
+                                        setEditForm(true)
+                                        setAddBlogForm(true)
+                                        
+                                    }}
+                                    className="blog overflow-hidden cursor-pointer m-4 bg-whiteColor w-[300px] text-black flex flex-col items-start justify-start rounded-xl" key={ind}
+                                >
                                     <Image src={blog.image} width={300} height={300} alt={`${blog.title}`} />
                                     <div className="text p-2 w-full">
                                     <h3 className='text-lg text-center font-medium'>{blog.title}</h3>

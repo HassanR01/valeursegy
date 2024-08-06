@@ -36,6 +36,10 @@ textarea {
     @apply w-[300px] bg-whiteColor text-mainColor my-6 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400
 }
 
+.btnDelete {
+    @apply w-[300px] bg-red-500 text-whiteColor my-6 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-red-600
+}
+
 td,
 th {
     padding: 8px;
