@@ -5,7 +5,7 @@ import './globals.css'
 import DashboardDataGeting from '../components/dashboard/DashboardDataGeting'
 import LoginPage from '../components/dashboard/login/LoginPage'
 
-export default function page() {
+export default function Page() {
   const [user, setUser] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
