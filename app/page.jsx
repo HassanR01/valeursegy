@@ -83,11 +83,11 @@ export default function Home() {
             transition={{duration: 1 , delay: 2}}
             className="Cont absolute w-full top-0 left-0"
           >
-            <div className="partners w-full overflow-hidden relative my-8 select-none">
+            <div className="partners w-full overflow-hidden relative select-none">
               <Slider {...settings} >
                 {brands.map((brand, ind) => (
                   <div key={ind} className="flex justify-center items-center p-4">
-                    <Image src={brand.logo} width={100} height={100} alt={brand.name} className="max-w-24 max-h-24 object-contain opacity-50 hover:opacity-100 duration-300" />
+                    <Image src={brand.logo} width={100} height={100} alt={brand.name} className="max-w-24 max-h-24 object-contain opacity-25 hover:opacity-100 duration-300" />
                   </div>
                 ))}
               </Slider>
