@@ -18,7 +18,7 @@ module.exports = {
         whiteColor: "#1d1a73",
       },
       fontFamily: {
-        mainFont: ['Poppins']
+        mainFont: ['Cairo']
       }
     },
   },

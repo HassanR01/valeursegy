@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 // Define the TransitionLink component
 const TransitionLink = ({ children, href, ...props }) => {
-    const router = useRouter();
+    const router = useRouter()
 
     // Handle link click for page transition
     const handleTransition = async (e) => {
