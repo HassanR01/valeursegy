@@ -83,7 +83,7 @@ const [alert, setAlert] = useState('')
         setAlert('Processing..')
         if (title && keywords && image && description && sections && writer) {
             try {
-                const res = await fetch(`/api/blogs/${title}`, {
+                const res = await fetch(`/api/blogs/${blogId}`, {
                     method: "PUT",
                     headers: {
                         "Content-type": "application/json"
@@ -109,7 +109,7 @@ const [alert, setAlert] = useState('')
     const DeleteBlog = async () => {
         if (confirm('You will Delete The Blog')) {
             try {
-                const res = await fetch(`/api/blogs/${title}`, {
+                const res = await fetch(`/api/blogs/${blogId}`, {
                     method: "DELETE"
                 })
 
@@ -130,6 +130,7 @@ const [alert, setAlert] = useState('')
             <div onClick={() => {
                 setAddBlogForm(!addBlogForm)
                 setEditForm(false)
+                setBlogId('')
                 settitle('')
                 setkeywords('')
                 setImage('')

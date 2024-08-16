@@ -6,7 +6,7 @@ export async function PUT(req, { params }) {
     const { blogtitle } = params
     const { title, keywords, image, description, sections, writer } = await req.json()
     await connectMongoDB()
-    await Blog.findOneAndUpdate({ title: blogtitle }, { title, keywords, image, description, sections, writer })
+    await Blog.findByIdAndUpdate(blogtitle, { title, keywords, image, description, sections, writer })
     return NextResponse.json({ message: 'Blog Updated' }, { status: 200 })
 }
 
@@ -20,7 +20,7 @@ export async function GET(req, { params }) {
 export async function DELETE(req, { params }) {
     const { blogtitle } = params
     await connectMongoDB()
-    await Blog.findOneAndDelete({ title: blogtitle })
+    await Blog.findByIdAndDelete(blogtitle)
     return NextResponse.json({ message: 'Blog Deleted' }, { status: 200 })
 }
 

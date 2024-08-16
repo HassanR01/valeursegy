@@ -24,11 +24,6 @@ export default function Home() {
         if (currentSectionIndex < sections.length - 1) {
           setCurrentSectionIndex(currentSectionIndex + 1);
         }
-      } else {
-        // Scroll up
-        if (currentSectionIndex > 0) {
-          setCurrentSectionIndex(currentSectionIndex - 1);
-        }
       }
 
       document.querySelector(sections[currentSectionIndex]).scrollIntoView({
@@ -79,14 +74,14 @@ export default function Home() {
               <h3 className="text-2xl font-black">Social Activity</h3>
             </motion.div>
           </div>
-          <div class="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
+          <div className="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
           <div className="ground-trans absolute -bottom-1 left-0 w-full h-[150px]"></div>
         </section>
         {/* Plane */}
         <motion.div id="plane" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}  className="image cursor-grab w-full h-[100vh] flex flex-col items-center justify-center">
           <Canvas shadows>
-            <PerspectiveCamera makeDefault position={[0, 5, 5]} />
-            <OrbitControls maxDistance={10} minDistance={1} maxPolarAngle={1.2} />
+            <PerspectiveCamera makeDefault position={[0, 3, 7]} />
+            <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} maxPolarAngle={1.2} />
             <fog attach='fog' color="#FFF7FC" near={2} far={20} />
             <Env />
 

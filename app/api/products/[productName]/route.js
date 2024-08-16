@@ -6,7 +6,7 @@ export async function PUT(req, { params }) {
     const { name, description, model, sections } = await req.json()
     const { productName } = params
     await connectMongoDB()
-    await Product.findOneAndUpdate({ name: productName }, { name, description, model, sections })
+    await Product.findByIdAndUpdate(productName, { name, description, model, sections })
     return NextResponse.json({message: "Product Updated"}, {status:200})
 }
 
@@ -20,6 +20,6 @@ export async function GET(req, { params }) {
 export async function DELETE(req, { params }) {
     const { productName } = params
     await connectMongoDB()
-    await Product.findOneAndDelete({ name: productName })
+    await Product.findByIdAndDelete(productName)
     return NextResponse.json({message: "Deleted Successfully"}, {status: 200}) 
 }

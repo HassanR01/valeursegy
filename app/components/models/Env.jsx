@@ -3,27 +3,30 @@ import { useGLTF, useAnimations, Html } from '@react-three/drei'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useThree } from '@react-three/fiber'
+import Image from 'next/image'
 
 export function Env(props) {
     const group = useRef()
     const { nodes, materials, animations } = useGLTF('/plane.gltf')
     const router = useRouter()
-    const {gl} = useThree()
+    const { gl } = useThree()
     const { actions } = useAnimations(animations, group)
 
     useEffect(() => {
-        // Set the desired speed (0.5 for half speed)
+
         const desiredSpeed = 0.3
 
-        // Iterate over all actions, set the timeScale, and play each one
+
         Object.values(actions).forEach(action => {
             action.setEffectiveTimeScale(desiredSpeed).play()
         })
 
-        // Cleanup to stop all animations when the component unmounts
+
         return () => {
             Object.values(actions).forEach(action => {
-                action.stop()
+                if (action) {
+                    action.stop()
+                }
             })
         }
     }, [actions])
@@ -39,16 +42,16 @@ export function Env(props) {
                 intensity={0.7}
                 castShadow={true}
                 position={[200, 300, 300]}
-                shadow-mapSize-width={2048}  // Increase shadow map size for better quality
+                shadow-mapSize-width={2048}
                 shadow-mapSize-height={2048}
-                shadow-camera-far={1000}     // Adjust camera distance for better coverage
+                shadow-camera-far={1000}
                 shadow-camera-near={0.5}
                 shadow-camera-left={-100}
                 shadow-camera-right={100}
                 shadow-camera-top={100}
                 shadow-camera-bottom={-100}
-                shadow-bias={-0.00005}       // Adjust bias to minimize shadow acne and lines
-                shadow-radius={3}            // Soft shadows by increasing the shadow radius
+                shadow-bias={-0.00005}
+                shadow-radius={3}
             />
 
             <directionalLight
@@ -69,8 +72,38 @@ export function Env(props) {
             />
 
             <Html position={[2, 0.75, 1.2]} transform sprite scale={[0.5, 0.5, 0.5]}>
-                <Link href={'/wellness'}>
-                    <div className="icon hover:scale-125 hover:bg-whiteColor duration-700 rounded-full bg-black bg-opacity-50 w-6 h-6 flex items-center justify-center text-xs text-white">H</div>
+                <Link href={'/wellness'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                        <Image src={'/health.png'} width={100} height={100} alt='wellness Icon' />
+                    </div>
+                </Link>
+            </Html>
+            <Html position={[-0.9, 0.5, 0.4]} transform sprite scale={[0.5, 0.5, 0.5]}>
+                <Link href={'/bioPrint'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                        <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
+                    </div>
+                </Link>
+            </Html>
+            <Html position={[-1.85, 0.95, 0.75]} transform sprite scale={[0.5, 0.5, 0.5]}>
+                <Link href={'/blogs'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                        <Image src={'/blogs.png'} width={100} height={100} alt='wellness Icon' />
+                    </div>
+                </Link>
+            </Html>
+            <Html position={[1.35, 0.75, -0.8]} transform sprite scale={[0.5, 0.5, 0.5]}>
+                <Link href={'/contactus'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                        <Image src={'/contact.png'} width={100} height={100} alt='wellness Icon' />
+                    </div>
+                </Link>
+            </Html>
+            <Html position={[-1.95, 1, -0.5]} transform sprite scale={[0.5, 0.5, 0.5]}>
+                <Link href={'/meeting-room'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                        <Image src={'/meeting.png'} width={100} height={100} alt='wellness Icon' />
+                    </div>
                 </Link>
             </Html>
 
