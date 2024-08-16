@@ -159,10 +159,11 @@ export default function ProductsSection({ products }) {
                 <label htmlFor="model">Choose Model: </label>
                 <select name="model" id="model" value={model} onChange={(e) => setmodel(e.target.value)}>
                   <option value="">Choose 3D Model</option>
-                  <option value="socheck">So-Check</option>
-                  <option value="bioPrint">Bio Print</option>
-                  <option value="melta-tech">Melta Tech</option>
-                  <option value="tablets">Tablets</option>
+                  <option value="So-Check">So-Check</option>
+                  <option value="Gniom-Check">Gniom-Check</option>
+                  <option value="Milta-Technology">Milta-Technology</option>
+                  <option value="Fusion-Products">Fusion-Products</option>
+                  <option value="Bio-print">Bio-print</option>
                 </select>
               </div>
             </div>

@@ -1,11 +1,35 @@
+import Footer from '@/app/components/main/Footer'
+import ProductPage from '@/app/components/wellness/productPage'
 import React from 'react'
 
+const GetProduct = async (model) => {
+    const apiUrl = process.env.API_URL
+    try {
+        const res = await fetch(`${apiUrl}/api/products/${model}`, {
+            cache: "no-store"
+        })
 
-export default function Page({ params }) {
+        if (res.ok) {
+            return res.json()
+        }
+    } catch (error) {
+        console.log(error);
+
+    }
+}
+
+
+
+export default async function Page({ params }) {
     const { productName } = params
-    console.log(productName)
+    const { product } = await GetProduct(productName)
 
     return (
-        <div className='p-5 font-bold text-3xl text-white'>{productName.replaceAll('.', ' ')}</div>
+        <>
+            <section className='flex flex-col items-center justify-start w-full'>
+                <ProductPage product={product} />
+            </section>
+            <Footer />
+        </>
     )
 }

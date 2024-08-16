@@ -1,0 +1,72 @@
+'use client'
+import { Canvas } from '@react-three/fiber'
+import React from 'react'
+import { Socheck } from '../models/Socheck'
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import TransitionLink from '../main/TransitionLink'
+import { Pill } from '../models/Fusion-Products'
+
+export default function ProductsList() {
+
+    return (
+        <>
+            <div className="list flex flex-wrap items-center justify-center w-full">
+                <TransitionLink href={`/wellness/So-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-xl min-w-[300px] max-w-[500px] h-[300px] border flex flex-col items-center justify-start">
+                    <Canvas>
+                        <PerspectiveCamera makeDefault position={[0, 3, 3]} />
+                        <OrbitControls enableZoom={false} />
+                        <Environment preset='city' />
+                        <Socheck />
+                    </Canvas>
+                    <div className="title p-2">
+                        <h2 className='text-2xl text-whiteColor font-bold'>So Check</h2>
+                    </div>
+                </TransitionLink>
+                <TransitionLink href={`/wellness/Gniom-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-xl min-w-[300px] max-w-[500px] h-[300px] border flex flex-col items-center justify-start">
+                    <Canvas>
+                        <PerspectiveCamera makeDefault position={[0, 3, 3]} />
+                        <OrbitControls enableZoom={false} />
+                        <Environment preset='city' />
+                        <Socheck />
+                    </Canvas>
+                    <div className="title p-2">
+                        <h2 className='text-2xl text-whiteColor font-bold'>Gniom Check</h2>
+                    </div>
+                </TransitionLink>
+                <TransitionLink href={`/wellness/Milta-Technology`} className="product hover:shadow-xl m-2 duration-700 rounded-xl min-w-[300px] max-w-[500px] h-[300px] border flex flex-col items-center justify-start">
+                    <Canvas>
+                        <PerspectiveCamera makeDefault position={[0, 3, 3]} />
+                        <OrbitControls enableZoom={false} />
+                        <Environment preset='city' />
+                        <Socheck />
+                    </Canvas>
+                    <div className="title p-2">
+                        <h2 className='text-2xl text-whiteColor font-bold'>Milta Technology</h2>
+                    </div>
+                </TransitionLink>
+                <TransitionLink href={`/wellness/Fusion-Products`} className="product hover:shadow-xl m-2 duration-700 rounded-xl min-w-[300px] max-w-[500px] h-[300px] border flex flex-col items-center justify-start">
+                    <Canvas>
+                        <PerspectiveCamera makeDefault position={[0, 7, 10]} />
+                        <OrbitControls enableZoom={false} />
+                        <Environment preset='city' />
+                        <Pill />
+                    </Canvas>
+                    <div className="title p-2">
+                        <h2 className='text-2xl text-whiteColor font-bold'>Fusion Products</h2>
+                    </div>
+                </TransitionLink>
+                <TransitionLink href={`/wellness/Bio-print`} className="product hover:shadow-xl m-2 duration-700 rounded-xl min-w-[300px] max-w-[500px] h-[300px] border flex flex-col items-center justify-start">
+                    <Canvas>
+                        <PerspectiveCamera makeDefault position={[0, 3, 3]} />
+                        <OrbitControls enableZoom={false} />
+                        <Environment preset='city' />
+                        <Socheck />
+                    </Canvas>
+                    <div className="title p-2">
+                        <h2 className='text-2xl text-whiteColor font-bold'>Bio Print</h2>
+                    </div>
+                </TransitionLink>
+            </div>
+        </>
+    )
+}

@@ -31,7 +31,21 @@ export default function Page() {
         <p className='text-xl font-semibold lg:text-2xl mb-4'>Ensuring that every individual experiences the best in medical care and wellness.</p>
         <p className='text-xl max-w-6xl'>Valeurs is at the forefront of transforming wellness through innovative medical technologies. As wellness ambassadors, we are dedicated to enhancing the quality of life by providing advanced solutions powered by the latest AI technologies. Our vision is to lead in the delivery of superior healthcare solutions that empower individuals and health-care	 professionals alike.</p>
       </section>
-      <div id='meetourteam' className="section my-10 p-4 text-center flex flex-col items-center justify-center">
+
+      <section
+        className="w-full h-[40vh] relative my-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${BgOCompany.src})`,
+          backgroundAttachment: 'fixed',
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
+        <h2 className='lg:text-6xl text-2xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6'>We are ambassadors of wellness</h2>
+
+      </section>
+
+      <section id='meetourteam' className="section my-10 p-4 text-center flex flex-col items-center justify-center">
         <h1 className='text-center text-4xl font-bold mb-4'>Meet Our Team</h1>
         <p className='text-lg font-medium max-w-6xl'>Behind every innovative solution at Valeurs is a team of passionate professionals committed to excellence. Our diverse team brings together expertise in healthcare, technology, and wellness to create impactful solutions for a healthier future.</p>
         <div className="TeamList flex flex-wrap items-center justify-center my-5 p-4">
@@ -78,7 +92,7 @@ export default function Page() {
 
 
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   )
