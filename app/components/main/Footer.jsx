@@ -37,7 +37,7 @@ export default function Footer() {
                 </ul>
             </div>
             <div className="links flex my-8 flex-col items-center text-center lg:text-start lg:items-start justify-center z-10">
-                <h2 className='text-2xl font-bold text-mainColor mb-4'>Be a one of the family to be updated</h2>
+                <h2 className='text-2xl font-bold text-mainColor mb-4'>Be one of the family to keep you updated</h2>
                 <div className="input lg:min-w-[450px]">
                     <input type="email" name="email" id="email" placeholder='Enter Your Email' />
                 </div>
