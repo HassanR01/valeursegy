@@ -1,5 +1,5 @@
 import Footer from '@/app/components/main/Footer'
-import ProductPage from '@/app/components/wellness/productPage'
+import ProductPage from '@/app/components/wellness/ProductPage'
 import React from 'react'
 
 const GetProduct = async (model) => {
