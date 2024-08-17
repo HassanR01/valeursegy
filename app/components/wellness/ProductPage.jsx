@@ -14,20 +14,22 @@ export default function ProductPage({ product }) {
             <div className="showModel w-full flex items-center justify-center h-[40vh]">
                 <Canvas>
                     <Environment preset='city' />
-                    <PerspectiveCamera makeDefault position={[0, 3, 7]} />
+                    <PerspectiveCamera makeDefault position={[0, 3, 4]} />
                     <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} maxPolarAngle={1.2} />
                     {model === 'So-Check' ? <Socheck /> : <Pill />}
                 </Canvas>
             </div>
             <h2 className='text-whiteColor font-bold text-2xl w-full text-center'>{name}</h2>
-            <div className="articale w-full h-[60vh] py-20 relative overflow-auto flex items-center justify-start flex-col">
-                <div className="ground-trans absolute -top-1 left-0 w-full h-[150px] rotate-180"></div>
-                {sections.map((section, ind) => (
-                    <div className="section max-w-5xl flex flex-col items-center justify-start my-4 w-full" key={ind}>
-                        <h2 className='text-xl font-semibold mb-4'>{section.subTitle}</h2>
-                        <div className="SecArtical">{HTMLReactParser(section.text)}</div>
-                    </div>
-                ))}
+            <div className="dadSection w-full p-4 text-center relative">
+                <div className="ground-trans -top-1 absolute left-0 w-full h-[150px] rotate-180"></div>
+                <div className="articale w-full h-[60vh] py-20 overflow-auto flex items-center justify-start flex-col">
+                    {sections.map((section, ind) => (
+                        <div className="section max-w-5xl flex flex-col items-center justify-start my-4 w-full" key={ind}>
+                            <h2 className='text-xl font-semibold mb-4'>{section.subTitle}</h2>
+                            <div className="SecArtical">{HTMLReactParser(section.text)}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     )
