@@ -21,7 +21,7 @@ export default function ProductsList() {
 
         return (
             <>
-                <div className="list flex flex-wrap items-center justify-center w-full">
+                <div className="list flex flex-wrap items-center justify-center my-20 w-full">
                     <TransitionLink href={`/wellness/So-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-xl min-w-[300px] w-[45%] h-[300px] border flex flex-col items-center justify-start">
                         <Canvas>
                             <PerspectiveCamera makeDefault position={[0, 3, 3]} />

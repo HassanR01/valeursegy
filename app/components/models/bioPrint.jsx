@@ -9,12 +9,12 @@ export function BioPrint(props) {
     // Rotate the model around its Y-axis
     useFrame(() => {
         if (modelRef.current) {
-            modelRef.current.rotation.x += 0.01 // Adjust the rotation speed here
+            modelRef.current.rotation.y += 0.01 // Adjust the rotation speed here
         }
     })
 
     return (
-        <group {...props} dispose={null}>
+        <group {...props} ref={modelRef} dispose={null}>
 
             <ambientLight />
             <pointLight position={[10, 10, 10]} />

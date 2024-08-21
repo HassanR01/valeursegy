@@ -14,7 +14,7 @@ export default function page() {
   return (
     <>
       <section className="section pt-20 min-h-screen w-full flex flex-col items-center justify-center">
-        <h2 className='text-3xl font-bold text-whiteColor my-16 w-full text-center'>Wellness</h2>
+        <h2 className='text-3xl font-bold text-whiteColor mt-16 w-full text-center'>Wellness</h2>
         <ProductsList />
       </section>
       

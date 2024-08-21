@@ -78,9 +78,9 @@ export default function Home() {
         </section> */}
         {/* Plane */}
         <motion.div id="plane" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}  className="image cursor-grab w-full h-[100vh] z-0 flex flex-col items-center justify-center">
-          <Canvas shadows>
+          <Canvas shadows style={{zIndex: 0, position: "relative"}}>
             <PerspectiveCamera makeDefault position={[2, 2, 7]} />
-            <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} maxPolarAngle={1.2} />
+            <OrbitControls maxDistance={15} minDistance={5} maxPolarAngle={1.2} />
             <fog attach='fog' color="#FFF7FC" near={2} far={25} />
             <Env />
           </Canvas>
