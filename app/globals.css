@@ -13,9 +13,28 @@ body {
   transition-duration: 500ms;
 }
 
+
+/* Start Scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fefefe;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1d1a73;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #1d1a73;
+}
+
+
 .page-transition {
   opacity: 0;
-  background: #03043b;
+  background: #fefefe;
   transform: translateY(40px);
   filter: blur(12px);
   -webkit-transform: translateY(40px);

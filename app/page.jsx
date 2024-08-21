@@ -49,9 +49,8 @@ export default function Home() {
 
     return (
       <>
-        <section id="home" className="home min-h-screen w-full flex items-center justify-center flex-col" style={{
+        {/* <section id="home" className="home min-h-screen w-full flex items-center justify-center flex-col" style={{
           backgroundImage: `url(${bgHome.src})`,
-          backgroundAttachment: 'fixed',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
         }}>
@@ -76,15 +75,14 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
           <div className="ground-trans absolute -bottom-1 left-0 w-full h-[150px]"></div>
-        </section>
+        </section> */}
         {/* Plane */}
-        <motion.div id="plane" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}  className="image cursor-grab w-full h-[100vh] flex flex-col items-center justify-center">
+        <motion.div id="plane" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}  className="image cursor-grab w-full h-[100vh] z-0 flex flex-col items-center justify-center">
           <Canvas shadows>
-            <PerspectiveCamera makeDefault position={[0, 3, 7]} />
+            <PerspectiveCamera makeDefault position={[2, 2, 7]} />
             <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} maxPolarAngle={1.2} />
-            <fog attach='fog' color="#FFF7FC" near={2} far={20} />
+            <fog attach='fog' color="#FFF7FC" near={2} far={25} />
             <Env />
-
           </Canvas>
         </motion.div>
       </>
