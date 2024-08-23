@@ -1,5 +1,6 @@
 import React from 'react'
 import TitleSection from '../components/main/TitleSection';
+import Footer from '../components/main/Footer';
 
 export const metadata = {
   title: "Valeurs - Contact Us",

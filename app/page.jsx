@@ -15,28 +15,6 @@ import AnimatedNumber from "./components/main/AnimateNumber";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const sections = ['#home', '#plane'];
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = (event) => {
-      if (event.deltaY > 0) {
-        // Scroll down
-        if (currentSectionIndex < sections.length - 1) {
-          setCurrentSectionIndex(currentSectionIndex + 1);
-        }
-      }
-
-      document.querySelector(sections[currentSectionIndex]).scrollIntoView({
-        behavior: 'smooth',
-      });
-    };
-
-    window.addEventListener('wheel', handleScroll);
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, [currentSectionIndex]);
 
   useEffect(() => {
     setIsLoading(false)
