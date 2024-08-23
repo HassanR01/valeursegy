@@ -1,4 +1,5 @@
 import Footer from '@/app/components/main/Footer'
+import TitleSection from '@/app/components/main/TitleSection'
 import ProductPage from '@/app/components/wellness/ProductPage'
 import React from 'react'
 
@@ -26,6 +27,7 @@ export default async function Page({ params }) {
 
     return (
         <>
+            <TitleSection title={`${product.name}`} description={product.description} />
             <section className='flex flex-col items-center justify-start w-full'>
                 <ProductPage product={product} />
             </section>

@@ -1,4 +1,5 @@
 import React from 'react'
+import TitleSection from '../components/main/TitleSection';
 
 export const metadata = {
   title: "Valeurs - Medical Blogs",
@@ -8,11 +9,12 @@ export const metadata = {
 
 export default function page() {
   return (
-    <div className="section w-full flex flex-col items-center justify-center">
-      <h2 className='text-3xl font-bold text-whiteColor my-16 w-full text-center'>Medical Blogs</h2>
-      <div className="list flex flex-wrap items-center justify-center w-full my-8">
+    <>
+      <TitleSection title={`Medical Blogs`} />
+      <section className='min-h-screen'>
 
-      </div>
-    </div>
+      </section>
+      <Footer />
+    </>
   )
 }

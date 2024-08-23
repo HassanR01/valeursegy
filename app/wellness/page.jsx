@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductsList from '../components/wellness/ProductsList';
 import Footer from '../components/main/Footer';
+import TitleSection from '../components/main/TitleSection';
 
 export const metadata = {
   title: "Valeurs - Wellness Products",
@@ -13,8 +14,8 @@ export default function page() {
 
   return (
     <>
-      <section className="section pt-20 min-h-screen w-full flex flex-col items-center justify-center">
-        <h2 className='text-3xl font-bold text-whiteColor mt-16 w-full text-center'>Wellness</h2>
+      <TitleSection title={'Wellness Solutions'} />
+      <section className="section min-h-screen w-full flex flex-col items-center justify-center">
         <ProductsList />
       </section>
       
