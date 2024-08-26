@@ -4,6 +4,10 @@ import BgHome from '../../public/bgHome.jpg'
 import Image from 'next/image';
 import Footer from '../components/main/Footer';
 import AnimatedNumber from '../components/main/AnimateNumber';
+import dynamic from 'next/dynamic';
+const BranchesMap = dynamic(() => import('../components/map/BranchesMap'), {
+  ssr: false
+})
 
 
 export const metadata = {
@@ -72,16 +76,14 @@ export default function Page() {
       
 
       <h2 className='text-xl lg:text-5xl my-10 font-bold'>Our Presence</h2>
-      <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl h-[50vh] mb-[80px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
+      <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl h-[50vh] mb-[80px] relative flex flex-col items-center justify-center overflow-hidden" style={{
         backgroundImage: `url(${BgHome.src})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: "start",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}>
-        
-
-
+        <BranchesMap />
         <div className="absolute inset-0 bg-whiteColor bg-opacity-90 filter"></div>
       </section>
 

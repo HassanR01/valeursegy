@@ -85,3 +85,18 @@ textarea {
 .btnForm {
   @apply w-[300px] bg-whiteColor text-mainColor my-6 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400;
 }
+
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.leaflet-control-zoom {
+  bottom: -10px;
+  left: 10px;
+}
+
+.leaflet-bottom {
+  display: none;
+}

@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber'
 
 export function BioPrint(props) {
     const modelRef = useRef()
-    const { nodes, materials } = useGLTF('/bio-printing.gltf')
+    const { nodes, materials } = useGLTF('/bioprinting.gltf')
 
     // Rotate the model around its Y-axis
     useFrame(() => {
@@ -32,8 +32,17 @@ export function BioPrint(props) {
                     geometry={nodes.Cylinder_2.geometry}
                     material={materials['Material.002']}
                 />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Cylinder_3.geometry}
+                    material={materials['Untitled design (1)']}
+                />
             </group>
-            <group position={[0, -0.945, 0.863]} scale={[1.247, 1.722, 1.247]}>
+            <group
+                position={[0.008, -0.945, 0.849]}
+                rotation={[0, 0.011, 0]}
+                scale={[1.247, 1.722, 1.247]}>
                 <mesh
                     castShadow
                     receiveShadow
@@ -273,4 +282,4 @@ export function BioPrint(props) {
     )
 }
 
-useGLTF.preload('/bio-printing.gltf')
+useGLTF.preload('/bioprinting.gltf')

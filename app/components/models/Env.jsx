@@ -71,35 +71,35 @@ export function Env(props) {
                 shadow-radius={3}
             />
 
-            <Html position={[2, 0.75, 1.2]} transform sprite scale={[0.5, 0.5, 0.5]} style={{zIndex: -1, position: "absolute"}}>
+            <Html position={[2, 0.75, 1.2]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/wellness'} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
                         <Image src={'/health.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[-0.9, 0.5, 0.4]} transform sprite scale={[0.5, 0.5, 0.5]} style={{zIndex: -1, position: "absolute"}}>
+            <Html position={[-0.9, 0.5, 0.4]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/wellness/So-Check'} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
                         <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[-1.85, 0.95, 0.75]} transform sprite scale={[0.5, 0.5, 0.5]} style={{zIndex: -1, position: "absolute"}}>
+            <Html position={[-1.85, 0.95, 0.75]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/blogs'} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
                         <Image src={'/blogs.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[1.35, 0.75, -0.8]} transform sprite scale={[0.5, 0.5, 0.5]} style={{zIndex: -1, position: "absolute"}}>
+            <Html position={[1.35, 0.75, -0.8]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/news'} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
                         <Image src={'/contact.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[-1.95, 1, -0.5]} transform sprite scale={[0.5, 0.5, 0.5]} style={{zIndex: -1, position: "absolute"}}>
+            <Html position={[-1.95, 1, -0.5]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/contactus'} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
                         <Image src={'/meeting.png'} width={100} height={100} alt='wellness Icon' />
