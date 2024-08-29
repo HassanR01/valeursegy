@@ -47,7 +47,6 @@ export function BioPrint(props) {
                     castShadow
                     receiveShadow
                     geometry={nodes.Cylinder001_1.geometry}
-                    material={materials['Material.003']}
                 />
                 <mesh
                     castShadow

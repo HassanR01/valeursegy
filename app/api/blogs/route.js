@@ -3,9 +3,9 @@ import Blog from "@/models/blogs"
 import { NextResponse } from "next/server"
 
 export async function POST(req) {
-    const { title, keywords, image, description, sections, writer } = await req.json()
+    const { title, keywords, image, description, sections, writer, titleAr, descriptionAr, sectionsAr } = await req.json()
     await connectMongoDB()
-    await Blog.create({ title, keywords, image, description, sections, writer })
+    await Blog.create({ title, keywords, image, description, sections, writer, titleAr, descriptionAr, sectionsAr })
     return NextResponse.json({ message: "Blog Created" }, { status: 201 })
 }
 
