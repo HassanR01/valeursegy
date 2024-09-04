@@ -50,3 +50,7 @@ table thead {
     background-color: #1d1a73;
     color: #FFF7FC;
 }
+
+.sectionsAr {
+    direction: rtl;
+}
