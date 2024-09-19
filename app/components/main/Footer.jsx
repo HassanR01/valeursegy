@@ -39,7 +39,7 @@ export default function Footer() {
                 <div className="input lg:min-w-[450px]">
                     <input type="email" name="email" id="email" placeholder='Enter Your Email' />
                 </div>
-                <div className="followUs my-2 flex flex-row items-start justify-center">
+                <div className="followUs my-8 flex flex-row items-start justify-center">
                     <h4 className='text-mainColor text-xl font-medium'>Follow Us</h4>
                 </div>
             </div>
