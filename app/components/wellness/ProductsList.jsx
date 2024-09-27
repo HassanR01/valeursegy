@@ -7,6 +7,8 @@ import TransitionLink from '../main/TransitionLink'
 import { Pill } from '../models/Fusion-Products'
 import Loading from '../main/Loading'
 import { BioPrint } from '../models/bioPrint'
+import { Gniom } from '../models/gniom-check'
+import { Milta } from '../models/Milta'
 
 export default function ProductsList() {
     const [isLoading, setIsLoading] = useState(true)
@@ -33,23 +35,12 @@ export default function ProductsList() {
                             <h2 className='text-2xl text-whiteColor font-bold'>So Check</h2>
                         </div>
                     </TransitionLink>
-                    {/* <TransitionLink href={`/wellness/Gniom-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
-                        <Canvas>
-                            <PerspectiveCamera makeDefault position={[0, 3, 3]} />
-                            <OrbitControls enableZoom={false} />
-                            <Environment preset='city' />
-                            <Socheck />
-                        </Canvas>
-                        <div className="title p-2">
-                            <h2 className='text-2xl text-whiteColor font-bold'>Gniom Check</h2>
-                        </div>
-                    </TransitionLink> */}
                     <TransitionLink href={`/wellness/Milta-Technology`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
-                            <PerspectiveCamera makeDefault position={[0, 3, 3]} />
+                            <PerspectiveCamera makeDefault position={[4, 0, 4]} />
                             <OrbitControls enableZoom={false} />
                             <Environment preset='city' />
-                            <Socheck />
+                            <Milta />
                         </Canvas>
                         <div className="title p-2">
                             <h2 className='text-2xl text-whiteColor font-bold'>Milta Technology</h2>
@@ -75,6 +66,17 @@ export default function ProductsList() {
                         </Canvas>
                         <div className="title p-2">
                             <h2 className='text-2xl text-whiteColor font-bold'>Bio Print</h2>
+                        </div>
+                    </TransitionLink>
+                    <TransitionLink href={`/wellness/gniom-check`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                        <Canvas>
+                            <PerspectiveCamera makeDefault position={[4, 2, 4]} />
+                            <OrbitControls enableZoom={false} />
+                            <Environment preset='city' />
+                            <Gniom />
+                        </Canvas>
+                        <div className="title p-2">
+                            <h2 className='text-2xl text-whiteColor font-bold'>Gniom Check</h2>
                         </div>
                     </TransitionLink>
                 </div>

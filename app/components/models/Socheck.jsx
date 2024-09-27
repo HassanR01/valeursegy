@@ -5,17 +5,17 @@ import { useFrame } from '@react-three/fiber'
 export function Socheck(props) {
     const modelRef = useRef()
 
-const { nodes, materials } = useGLTF('/socheck.gltf')
+    const { nodes, materials } = useGLTF('/socheck.gltf')
 
-// Rotate the model around its Y-axis
-useFrame(() => {
-    if (modelRef.current) {
-        modelRef.current.rotation.y += 0.01 // Adjust the rotation speed here
-    }
-})
+    // Rotate the model around its Y-axis
+    useFrame(() => {
+        if (modelRef.current) {
+            modelRef.current.rotation.y += 0.01 // Adjust the rotation speed here
+        }
+    })
 
-return (
-    <group {...props} ref={modelRef} dispose={null}>
+    return (
+        <group {...props} ref={modelRef} dispose={null}>
 
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
