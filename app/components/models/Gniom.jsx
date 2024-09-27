@@ -6,7 +6,7 @@ export function Gniom(props) {
     const modelRef = useRef()
 
     const { nodes, materials } = useGLTF('/geniom.gltf')
-    
+
     // Rotate the model around its Y-axis
     useFrame(() => {
         if (modelRef.current) {

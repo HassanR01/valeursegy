@@ -7,8 +7,8 @@ import TransitionLink from '../main/TransitionLink'
 import { Pill } from '../models/Fusion-Products'
 import Loading from '../main/Loading'
 import { BioPrint } from '../models/bioPrint'
-import { Gniom } from '../models/gniom-check'
 import { Milta } from '../models/Milta'
+import { Gniom } from '../models/Gniom'
 
 export default function ProductsList() {
     const [isLoading, setIsLoading] = useState(true)

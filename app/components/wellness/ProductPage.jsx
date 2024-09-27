@@ -8,8 +8,8 @@ import HTMLReactParser from 'html-react-parser'
 import { motion } from 'framer-motion'
 import Loading from '../main/Loading'
 import { BioPrint } from '../models/bioPrint'
-import { Gniom } from '../models/gniom-check'
 import { Milta } from '../models/Milta'
+import { Gniom } from '../models/Gniom'
 
 
 export default function ProductPage({ product }) {
