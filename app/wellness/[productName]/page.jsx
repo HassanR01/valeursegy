@@ -5,6 +5,7 @@ import React from 'react'
 
 const GetProduct = async (model) => {
     const apiUrl = process.env.API_URL
+    
     try {
         const res = await fetch(`${apiUrl}/api/products/${model}`, {
             cache: "no-store"

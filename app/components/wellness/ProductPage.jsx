@@ -8,6 +8,8 @@ import HTMLReactParser from 'html-react-parser'
 import { motion } from 'framer-motion'
 import Loading from '../main/Loading'
 import { BioPrint } from '../models/bioPrint'
+import { Gniom } from '../models/gniom-check'
+import { Milta } from '../models/Milta'
 
 
 export default function ProductPage({ product }) {
@@ -62,7 +64,7 @@ export default function ProductPage({ product }) {
                                     <Environment preset='city' />
                                     <PerspectiveCamera makeDefault position={[0, 3, 6]} />
                                     <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
-                                    <Socheck />
+                                    <Gniom />
                                 </Canvas>
                             </>
                         )}
@@ -92,7 +94,7 @@ export default function ProductPage({ product }) {
                                     <Environment preset='city' />
                                     <PerspectiveCamera makeDefault position={[0, 3, 6]} />
                                     <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
-                                    <Socheck />
+                                    <Milta />
                                 </Canvas>
                             </>
                         )}

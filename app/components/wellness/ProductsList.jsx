@@ -68,7 +68,7 @@ export default function ProductsList() {
                             <h2 className='text-2xl text-whiteColor font-bold'>Bio Print</h2>
                         </div>
                     </TransitionLink>
-                    <TransitionLink href={`/wellness/gniom-check`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                    <TransitionLink href={`/wellness/Gniom-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
                             <PerspectiveCamera makeDefault position={[4, 2, 4]} />
                             <OrbitControls enableZoom={false} />
