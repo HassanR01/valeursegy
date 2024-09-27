@@ -177,10 +177,10 @@ export function Env(props) {
                     <mesh name="Circle005" geometry={nodes.Circle005.geometry} material={materials['Material.074']} position={[-0.771, -1.001, -0.281]} scale={[0.086, 0.062, 0.086]} />
                     <mesh name="Circle006" geometry={nodes.Circle006.geometry} material={materials['Material.074']} position={[0.786, -1.001, 0.327]} scale={[0.086, 0.062, 0.086]} />
                     <mesh name="Circle007" geometry={nodes.Circle007.geometry} material={materials['Material.074']} position={[0.786, -1.001, -0.281]} scale={[0.086, 0.062, 0.086]} />
-                    <group name="Circle008" position={[1.009, -0.759, -0.008]} rotation={[Math.PI, 0, -Math.PI / 2]} scale={[-0.062, -0.086, -0.086]}>
+                    {/* <group name="Circle008" position={[1.009, -0.759, -0.008]} rotation={[Math.PI, 0, -Math.PI / 2]} scale={[-0.062, -0.086, -0.086]}>
                         <mesh name="Mesh_13" geometry={nodes.Mesh_13.geometry} material={materials['Material.072']} />
                         <mesh name="Mesh_14" geometry={nodes.Mesh_14.geometry} material={materials['Material.073']} />
-                    </group>
+                    </group> */}
                     <mesh name="Cube001" geometry={nodes.Cube001.geometry} material={materials['Material.014']} position={[-0.973, 0.284, 0.249]} rotation={[0, 0.187, 0]} scale={[0.062, 0.067, 0.092]} />
                     <mesh name="Cube025" geometry={nodes.Cube025.geometry} material={materials['Material.003']} position={[-0.973, -0.27, 0.249]} rotation={[0, 0.187, 0]} scale={[0.062, 0.067, 0.092]} />
                     <mesh name="Cube026" geometry={nodes.Cube026.geometry} material={materials['Material.067']} position={[0.335, -0.455, -0.37]} scale={[0.28, 0.003, 0.252]} />
