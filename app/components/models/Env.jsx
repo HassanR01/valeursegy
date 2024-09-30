@@ -55,7 +55,7 @@ export function Env(props) {
             />
 
             <directionalLight
-                intensity={5.5}
+                intensity={2.5}
                 castShadow={true}
                 color={"#ffffff"}
                 position={[0, 120, 0]}

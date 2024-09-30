@@ -97,7 +97,7 @@ export default function Page() {
               <Image className='hover:scale-110 duration-700' src={'/person1.png'} width={300} height={300} alt='person Name' />
             </div>
             <div className="details hover:shadow-lg duration-700 border-2 border-whiteColor pt-20 p-2 rounded-tr-xl rounded-bl-xl flex flex-col items-center justify-center w-full">
-              <h4 className='text-xl font-bold text-center'>Dr. Muhammed Essawy</h4>
+              <h4 className='text-xl font-bold text-center'>Dr. Mohamoud Essawy</h4>
               <h6 className='text-xl'>CEO</h6>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function Page() {
               <Image className='hover:scale-110 duration-700' src={'/person1.png'} width={300} height={300} alt='person Name' />
             </div>
             <div className="details hover:shadow-lg duration-700 border-2 border-whiteColor pt-20 p-2 rounded-tr-xl rounded-bl-xl flex flex-col items-center justify-center w-full">
-              <h4 className='text-xl font-bold text-center'>Dr. Raouf</h4>
+              <h4 className='text-xl font-bold text-center'>Mr. Ahmed Atta</h4>
               <h6 className='text-xl'>CFO</h6>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function Page() {
               <Image className='hover:scale-110 duration-700' src={'/person1.png'} width={300} height={300} alt='person Name' />
             </div>
             <div className="details hover:shadow-lg duration-700 border-2 border-whiteColor pt-20 p-2 rounded-tr-xl rounded-bl-xl flex flex-col items-center justify-center w-full">
-              <h4 className='text-xl font-bold text-center'>Dr. Muhammed Essam</h4>
+              <h4 className='text-xl font-bold text-center'>Dr. Assem El-Damanhory</h4>
               <h6 className='text-xl'>Sales Manager</h6>
             </div>
           </div>
