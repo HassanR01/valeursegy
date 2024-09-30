@@ -59,7 +59,7 @@ export default function Home() {
           <Canvas shadows style={{zIndex: 0, position: "relative"}}>
             <PerspectiveCamera makeDefault position={[2, 2, 7]} />
             <OrbitControls maxDistance={15} minDistance={5} maxPolarAngle={1.2} />
-            <fog attach='fog' color="#FFF7FC" near={2} far={25} />
+            <fog attach='fog' color="#ffffff" near={2} far={20} />
             <Env />
           </Canvas>
         </motion.div>

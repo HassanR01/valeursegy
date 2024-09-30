@@ -35,7 +35,7 @@ export function Env(props) {
     return (
         <group ref={group} {...props} dispose={null}>
 
-            <ambientLight intensity={1.5} color={"#ffffff"} />
+            <ambientLight intensity={0.5} color={"#ffffff"} />
 
             {/* Directional light with shadows */}
             <directionalLight
