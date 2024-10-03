@@ -19,7 +19,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl h-[85vh] my-[80px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
+      <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl lg:h-[85vh] h-[120vh] my-[80px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
         backgroundImage: `url(${BgHome.src})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: "start",
@@ -64,18 +64,18 @@ export default function Page() {
         }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
-        <h2 className='lg:text-6xl text-2xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6'>We are ambassadors of wellness</h2>
+        <h2 className='lg:text-6xl text-3xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6 px-2'>We are ambassadors of wellness</h2>
 
       </section>
 
       <section id='text' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
-        <h2 className='text-xl lg:text-5xl mb-10 font-bold'>Our Vision</h2>
+        <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>Our Vision</h2>
         <p className='text-xl font-semibold lg:text-3xl mb-4'>Our vision at Valeurs is to revolutionize wellness by harnessing innovative medical technologies</p>
         <p className='text-xl max-w-6xl'>As leaders and ambassadors of wellness, we are committed to enhancing the quality of life with AI-driven solutions, empowering healthcare professionals and individuals alike to achieve excellence in healthcare.</p>
       </section>
       
 
-      <h2 className='text-xl lg:text-5xl my-10 font-bold'>Our Presence</h2>
+      <h2 className='text-3xl lg:text-5xl my-10 font-bold'>Our Presence</h2>
       <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl h-[50vh] mb-[80px] relative flex flex-col items-center justify-center overflow-hidden" style={{
         backgroundImage: `url(${BgHome.src})`,
         backgroundAttachment: 'fixed',

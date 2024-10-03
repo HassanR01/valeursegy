@@ -19,6 +19,9 @@ export default function BranchesMap() {
         {
             name: "France",
             location: [48.86701719193213, 2.307817967512028]
+        }, {
+            name: "USA",
+            location: [39.79166189946521, -101.4096355812243]
         }
     ]
 
@@ -33,7 +36,7 @@ export default function BranchesMap() {
     })
 
     return (
-        <MapContainer center={[avgX / branches.length, avgY / branches.length]} scrollWheelZoom={false} zoomControl={false} zoom={2}>
+        <MapContainer center={[avgX / branches.length, avgY / branches.length]} scrollWheelZoom={false} zoomControl={false} zoom={1}>
             <TileLayer
                 attribution='&copy; <a href="https://https://rockaidev.vercel.app">Rockai Dev</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

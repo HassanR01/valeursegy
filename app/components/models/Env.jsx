@@ -71,41 +71,49 @@ export function Env(props) {
                 shadow-radius={3}
             />
 
-            <Html position={[2, 0.75, 1.2]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
+            <Html position={[1.7, 1.1, 0.9]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/wellness'} className="iconInModel relative flex items-center justify-center text-xs text-white">
-                    <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                    <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Wellness Solutions'>
                         <Image src={'/health.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[-0.9, 0.5, 0.4]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
+            <Html position={[-1.05, 0.6, 0.7]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/wellness/So-Check'} className="iconInModel relative flex items-center justify-center text-xs text-white">
-                    <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                    <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='So-Check Device'>
                         <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[-1.85, 0.95, 0.75]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/blogs'} className="iconInModel relative flex items-center justify-center text-xs text-white">
-                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+            <Html position={[-2.15, 0.95, 0.85]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
+                <Link href={'/wellness/Bio-print'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Bio Print Device'>
                         <Image src={'/blogs.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[1.35, 0.75, -0.8]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
+            <Html position={[1.3, 0.75, -0.9]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/news'} className="iconInModel relative flex items-center justify-center text-xs text-white">
-                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='News'>
                         <Image src={'/contact.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
-            <Html position={[-1.95, 1, -0.5]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
+            <Html position={[-2.2, 1.2, -0.3]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={'/contactus'} className="iconInModel relative flex items-center justify-center text-xs text-white">
-                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Contact Us'>
                         <Image src={'/meeting.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
+            <Html position={[0, 1.5, -1.4]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
+                <Link href={'/wellness/Fusion-Products'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                    <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Fusion Products'>
+                        <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
+                    </div>
+                </Link>
+            </Html>
+
 
             <group name="Scene">
                 <group name="C-Component#7" position={[0.553, -0.158, -1.585]} rotation={[Math.PI, -0.227, 0]} scale={-0.051}>
@@ -315,7 +323,16 @@ export function Env(props) {
                     <mesh name="Cylinder006_1" geometry={nodes.Cylinder006_1.geometry} material={materials['Material.027']} />
                     <mesh name="Cylinder006_2" geometry={nodes.Cylinder006_2.geometry} material={materials['Material.023']} />
                 </group>
-                <group name="flyer_2" position={[-2.111, 0.116, 2.028]} rotation={[0, 0.3, 0]} scale={[2.165, 2.588, 2.165]}>
+                <group
+                    onPointerOver={(e) => {
+                        gl.domElement.style.cursor = 'pointer';
+                    }}
+                    onPointerOut={(e) => {
+                        gl.domElement.style.cursor = 'default';
+                    }}
+                    onClick={() => router.push('/contactus')}
+                    name="flyer_2" position={[-2.111, 0.116, 2.028]} rotation={[0, 0.3, 0]} scale={[2.165, 2.588, 2.165]}
+                >
                     <mesh name="Cube081" geometry={nodes.Cube081.geometry} material={materials['Material.004']} />
                     <mesh name="Cube081_1" geometry={nodes.Cube081_1.geometry} material={materials['Untitled Image']} />
                 </group>
