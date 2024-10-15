@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Footer from '../components/main/Footer';
 import AnimatedNumber from '../components/main/AnimateNumber';
 import dynamic from 'next/dynamic';
+import Header from '../components/main/Header';
 const BranchesMap = dynamic(() => import('../components/map/BranchesMap'), {
   ssr: false
 })
@@ -19,6 +20,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <Header translate={'/ar/our-company'} />
       <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl lg:h-[85vh] h-[120vh] my-[80px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
         backgroundImage: `url(${BgHome.src})`,
         backgroundAttachment: 'fixed',

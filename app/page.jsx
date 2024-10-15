@@ -11,15 +11,16 @@ import bgHome from '../public/bgHome.jpg'
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimatedNumber from "./components/main/AnimateNumber";
+import Header from "./components/main/Header";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
-  const sections = ['#home', '#plane'];
+  const sections = ['#home', '#plane']
 
   useEffect(() => {
     setIsLoading(false)
   }, [])
-
+ 
   if (isLoading) {
     return <Loading />
   } else {
@@ -27,6 +28,7 @@ export default function Home() {
 
     return (
       <>
+        <Header translate={'/ar'} />
         {/* <section id="home" className="home min-h-screen w-full flex items-center justify-center flex-col" style={{
           backgroundImage: `url(${bgHome.src})`,
           backgroundSize: 'cover',

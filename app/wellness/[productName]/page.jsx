@@ -1,4 +1,5 @@
 import Footer from '@/app/components/main/Footer'
+import Header from '@/app/components/main/Header'
 import TitleSection from '@/app/components/main/TitleSection'
 import ProductPage from '@/app/components/wellness/ProductPage'
 import React from 'react'
@@ -25,9 +26,10 @@ const GetProduct = async (model) => {
 export default async function Page({ params }) {
     const { productName } = params
     const { product } = await GetProduct(productName)
-
+    
     return (
         <>
+            <Header translate={`/ar/wellness/${productName}`} />
             <TitleSection title={`${product.name}`} description={product.description} />
             <section className='flex flex-col items-center justify-start w-full'>
                 <ProductPage product={product} />

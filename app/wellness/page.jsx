@@ -2,6 +2,7 @@ import React from 'react'
 import ProductsList from '../components/wellness/ProductsList';
 import Footer from '../components/main/Footer';
 import TitleSection from '../components/main/TitleSection';
+import Header from '../components/main/Header';
 
 export const metadata = {
   title: "Valeurs - Wellness Products",
@@ -14,9 +15,10 @@ export default function page() {
 
   return (
     <>
+      <Header translate={'/ar/wellness'} />
       <TitleSection title={'Wellness Solutions'} />
       <section className="section min-h-screen w-full flex flex-col items-center justify-center">
-        <ProductsList />
+        <ProductsList lang={''} />
       </section>
       
       <Footer />
