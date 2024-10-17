@@ -9,13 +9,15 @@ import BlogsSection from './BlogsSection'
 import MeetingSection from './MeetingSection'
 import HcpsSection from './HcpsSection'
 import UsersSection from './UsersSection'
+import SocialImpactSection from './SocialImpactSection'
+import NewsSction from './NewsSction'
 
 export default function DashboardDataGeting() {
     const [blogs, setBlogs] = useState(null)
     const [hcps, setHcps] = useState(null)
     const [meetings, setMeetings] = useState(null)
     const [products, setProducts] = useState(null)
-    const [users,setUsers] = useState(null)
+    const [users, setUsers] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [section, setSection] = useState('Products')
 
@@ -85,6 +87,8 @@ export default function DashboardDataGeting() {
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Analysis')}>Analysis</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Products')}>Products</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Blogs')}>Blogs</li>
+                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('News')}>News</li>
+                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Social-Impact')}>Social Impact</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Meetings')}>Meetings</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('HCPs')}>HCPs</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Users')}>Users</li>
@@ -116,6 +120,22 @@ export default function DashboardDataGeting() {
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Blogs</h3>
                             <BlogsSection blogs={blogs} />
+                        </section>
+                    </>
+                )}
+                {section === "News" && (
+                    <>
+                        <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
+                            <h3 className='text-whiteColor font-bold mb-8 text-2xl'>News</h3>
+                            <NewsSction />
+                        </section>
+                    </>
+                )}
+                {section === "Social-Impact" && (
+                    <>
+                        <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
+                            <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Social Impact</h3>
+                            <SocialImpactSection />
                         </section>
                     </>
                 )}

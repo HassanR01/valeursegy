@@ -45,7 +45,7 @@ export default function HeaderAr({ translate }) {
       className='fixed w-full h-[100px] top-0 left-0 flex flex-col items-center text-white justify-start z-[100] duration-500'
     >
 
-      <div className="preMenu bg-black w-full p-1">
+      <div className="preMenu hidden lg:flex bg-black w-full p-1">
         <nav>
           <ul className='flex items-center justify-end'>
             <li><TransitionLink className={`mx-4`} href={'/contactus'}>Contact Us</TransitionLink></li>
