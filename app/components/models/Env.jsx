@@ -12,6 +12,7 @@ export function Env(props) {
     const { gl } = useThree()
     const { actions } = useAnimations(animations, group)
 
+
     useEffect(() => {
 
         const desiredSpeed = 0.3
@@ -72,42 +73,42 @@ export function Env(props) {
             />
 
             <Html position={[1.7, 1.1, 0.9]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/wellness'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                <Link href={`${props.lang === 'ar' ? '/ar' : ''}/wellness`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Wellness Solutions'>
                         <Image src={'/health.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[-1.05, 0.6, 0.7]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/wellness/So-Check'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                <Link href={`${props.lang === 'ar' ? '/ar' : ''}/wellness/So-Check`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='So-Check Device'>
                         <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[-2.15, 0.95, 0.85]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/wellness/Bio-print'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                <Link href={`${props.lang === 'ar' ? '/ar' : ''}/wellness/Bio-print`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Bio Print Device'>
                         <Image src={'/blogs.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[1.3, 0.75, -0.9]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/news'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                <Link href={`${props.lang === 'ar' ? '/ar' : ''}/news`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='News'>
                         <Image src={'/contact.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[-2.2, 1.2, -0.3]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/contactus'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                <Link href={`${props.lang === 'ar' ? '/ar' : ''}/contactus`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Contact Us'>
                         <Image src={'/meeting.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[0, 1.5, -1.4]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
-                <Link href={'/wellness/Fusion-Products'} className="iconInModel relative flex items-center justify-center text-xs text-white">
+                <Link href={`${props.lang === "ar" ? "/ar" : ""}/wellness/Fusion-Products`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Fusion Products'>
                         <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
@@ -330,7 +331,7 @@ export function Env(props) {
                     onPointerOut={(e) => {
                         gl.domElement.style.cursor = 'default';
                     }}
-                    onClick={() => router.push('/contactus')}
+                    onClick={() => router.push(`${props.lang === 'ar' ? '/ar' : ''}/contactus`)}
                     name="flyer_2" position={[-2.111, 0.116, 2.028]} rotation={[0, 0.3, 0]} scale={[2.165, 2.588, 2.165]}
                 >
                     <mesh name="Cube081" geometry={nodes.Cube081.geometry} material={materials['Material.004']} />
@@ -371,7 +372,7 @@ export function Env(props) {
                     onPointerOut={(e) => {
                         gl.domElement.style.cursor = 'default';
                     }}
-                    onClick={() => router.push('/our-company')}
+                    onClick={() => router.push(`${props.lang === 'ar' ? '/ar' : ""}/our-company`)}
                     geometry={nodes.valeurs_logo.geometry} material={materials['Material.013']} position={[-1.082, -0.035, 2.219]} scale={4.831} />
             </group>
         </group>

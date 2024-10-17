@@ -49,7 +49,7 @@ export default function HeaderAr({ translate }) {
         <nav>
           <ul className='flex items-center justify-end'>
             <li><TransitionLink className={`mx-4`} href={'/contactus'}>Contact Us</TransitionLink></li>
-            <li><TransitionLink className={`mx-4`} href={'/partenerships'}>Partnerships</TransitionLink></li>
+            <li><TransitionLink className={`mx-4`} href={'/partnerships'}>Partnerships</TransitionLink></li>
             <li><TransitionLink className={`mx-4`} href={'/careers'}>Careers</TransitionLink></li>
           </ul>
         </nav>

@@ -62,7 +62,7 @@ export default function Home() {
             <PerspectiveCamera makeDefault position={[2, 2, 7]} />
             <OrbitControls maxDistance={15} minDistance={5} maxPolarAngle={1.2} />
             <fog attach='fog' color="#ffffff" near={2} far={20} />
-            <Env />
+            <Env lang={'en'} />
           </Canvas>
         </motion.div>
       </>

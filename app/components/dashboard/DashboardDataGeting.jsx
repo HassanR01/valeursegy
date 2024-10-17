@@ -11,6 +11,7 @@ import HcpsSection from './HcpsSection'
 import UsersSection from './UsersSection'
 import SocialImpactSection from './SocialImpactSection'
 import NewsSction from './NewsSction'
+import CareersSection from './CareersSection'
 
 export default function DashboardDataGeting() {
     const [blogs, setBlogs] = useState(null)
@@ -91,6 +92,7 @@ export default function DashboardDataGeting() {
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Social-Impact')}>Social Impact</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Meetings')}>Meetings</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('HCPs')}>HCPs</li>
+                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Careers')}>Careers</li>
                             <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Users')}>Users</li>
                         </ul>
                     </nav>
@@ -152,6 +154,14 @@ export default function DashboardDataGeting() {
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>HCPs</h3>
                             <HcpsSection hcps={hcps} />
+                        </section>
+                    </>
+                )}
+                {section === "Careers" && (
+                    <>
+                        <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
+                            <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Careers</h3>
+                            <CareersSection />
                         </section>
                     </>
                 )}
