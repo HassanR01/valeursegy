@@ -5,9 +5,9 @@ const meetingSchema = new Schema({
     email: String,
     phone: String,
     position: String,
-    medId: String,
+    department: String,
     message: String,
-}, {timestamps: true})
+}, { timestamps: true })
 
 const Meeting = mongoose.models.Meeting || mongoose.model('Meeting', meetingSchema)
 
