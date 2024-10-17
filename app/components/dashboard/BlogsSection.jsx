@@ -169,7 +169,7 @@ export default function BlogsSection({ blogs }) {
                 <>
                     <motion.form
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 0.7 }}
                         onChange={() => setAlert('')}
                         onSubmit={editForm ? handleEditBlog : HandleAddBlog}
