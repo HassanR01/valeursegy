@@ -45,7 +45,7 @@ export default function ProductPage({ product, lang }) {
                             centeredSlides={true}
                             autoHeight={true}
                             autoplay={{
-                                delay: 2500,
+                                delay: 10000,
                                 disableOnInteraction: false,
                             }}
                             pagination={{

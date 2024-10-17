@@ -7,7 +7,7 @@ export default function TitleSection({title, description}) {
 
   return (
       <>
-          <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} id='ouroverview' className="section w-[95%] rounded-tr-2xl rounded-bl-2xl h-[50vh] my-[80px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
+          <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} id='ouroverview' className="section w-[95%] rounded-tr-2xl rounded-bl-2xl h-[50vh] my-[100px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
               backgroundImage: `url(${OurCompany.src})`,
               backgroundPosition: "start",
               backgroundSize: 'cover',

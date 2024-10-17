@@ -21,7 +21,7 @@ export default function Page() {
   return (
     <>
       <HeaderAr translate={'/our-company'} />
-      <section dir='rtl' id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl lg:h-[85vh] h-[120vh] my-[80px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
+      <section dir='rtl' id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl lg:h-[85vh] h-[120vh] my-[100px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
         backgroundImage: `url(${BgHome.src})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: "start",
