@@ -75,28 +75,28 @@ export function Env(props) {
             <Html position={[1.7, 1.1, 0.9]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={`${props.lang === 'ar' ? '/ar' : ''}/wellness`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Wellness Solutions'>
-                        <Image src={'/health.png'} width={100} height={100} alt='wellness Icon' />
+                        <Image src={'/wellness.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[-1.05, 0.6, 0.7]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={`${props.lang === 'ar' ? '/ar' : ''}/wellness/So-Check`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-0.5 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='So-Check Device'>
-                        <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
+                        <Image src={'/socheck.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[-2.15, 0.95, 0.85]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={`${props.lang === 'ar' ? '/ar' : ''}/wellness/Bio-print`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Bio Print Device'>
-                        <Image src={'/blogs.png'} width={100} height={100} alt='wellness Icon' />
+                        <Image src={'/bio.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
             <Html position={[1.3, 0.75, -0.9]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={`${props.lang === 'ar' ? '/ar' : ''}/news`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='News'>
-                        <Image src={'/contact.png'} width={100} height={100} alt='wellness Icon' />
+                        <Image src={'/news.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>
@@ -110,7 +110,7 @@ export function Env(props) {
             <Html position={[0, 1.5, -1.4]} transform sprite scale={[0.5, 0.5, 0.5]} style={{ zIndex: -1, position: "absolute" }}>
                 <Link href={`${props.lang === "ar" ? "/ar" : ""}/wellness/Fusion-Products`} className="iconInModel relative flex items-center justify-center text-xs text-white">
                     <div className="image flex items-center justify-center p-1 hover:scale-150 hover:bg-mainColor duration-700 rounded-full bg-white bg-opacity-75 w-6 h-6 z-10" title='Fusion Products'>
-                        <Image src={'/medicine.png'} width={100} height={100} alt='wellness Icon' />
+                        <Image src={'/fproduct.png'} width={100} height={100} alt='wellness Icon' />
                     </div>
                 </Link>
             </Html>

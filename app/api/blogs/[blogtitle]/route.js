@@ -13,7 +13,7 @@ export async function PUT(req, { params }) {
 export async function GET(req, { params }) {
     const { blogtitle } = params
     await connectMongoDB()
-    const blog = Blog.findOne({ title: blogtitle })
+    const blog = await Blog.findOne({ title: blogtitle })
     return NextResponse.json({ blog })
 }
 

@@ -6,7 +6,7 @@ import TransitionLink from './TransitionLink'
 import { useRouter } from 'next/navigation'
 import MenuBar from './menuBar'
 
-export default function HeaderAr({ translate }) {
+export default function Header({ translate }) {
   const [openMenu, setOpenMenu] = useState(false)
   const router = useRouter()
 

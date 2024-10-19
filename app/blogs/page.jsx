@@ -2,6 +2,7 @@ import React from 'react'
 import TitleSection from '../components/main/TitleSection';
 import Footer from '../components/main/Footer';
 import Header from '../components/main/Header';
+import BlogsList from '../components/blogs/BlogsList';
 
 export const metadata = {
   title: "Valeurs - Medical Blogs",
@@ -14,8 +15,8 @@ export default function page() {
     <>
       <Header translate={'/ar/blogs'} />
       <TitleSection title={`Medical Blogs`} />
-      <section className='min-h-screen'>
-
+      <section className='min-h-screen w-full flex flex-col items-center justify-center'>
+          <BlogsList />
       </section>
       <Footer />
     </>
