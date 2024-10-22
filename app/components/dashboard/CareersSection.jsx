@@ -201,7 +201,7 @@ export default function CareersSection({ careers }) {
             {/* In Arabic Data */}
             <div className="my-10"></div>
             <h3 className='w-full text-start font-bold text-2xl'>Arabic</h3>
-            <div className="fRow w-full flex flex-wrap items-center justify-around">
+            <div dir='rtl' className="fRow w-full flex flex-wrap items-center justify-around">
               <div className="titleAr">
                 <label htmlFor='titleAr'>عنوان الوظيفة:</label>
                 <input type="text" name="titleAr" id="titleAr" value={titleAr} onChange={(e) => settitleAr(e.target.value)} />

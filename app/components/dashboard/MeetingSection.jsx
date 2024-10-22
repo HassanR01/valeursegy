@@ -11,10 +11,10 @@ export default function MeetingSection({ meetings }) {
           <thead>
             <tr>
               <th className='rounded-tl-xl'>Name</th>
-              <th>Mobil</th>
+              <th>Mobile</th>
               <th>Email</th>
               <th>Title</th>
-              <th>Medical ID</th>
+              <th>Department</th>
               <th className='rounded-tr-xl'>Message</th>
             </tr>
           </thead>
@@ -25,7 +25,7 @@ export default function MeetingSection({ meetings }) {
                 <td>{meetings.phone}</td>
                 <td>{meetings.email}</td>
                 <td>{meetings.position}</td>
-                <td>{meetings.medId}</td>
+                <td>{meetings.department}</td>
                 <td>{meetings.message}</td>
               </tr>
             ))}

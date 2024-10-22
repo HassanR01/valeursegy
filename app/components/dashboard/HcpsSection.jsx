@@ -10,7 +10,7 @@ export default function HcpsSection({ hcps }) {
           <thead>
             <tr>
               <th className='rounded-tl-xl'>Name</th>
-              <th>Mobil </th>
+              <th>Mobile </th>
               <th>Email</th>
               <th>Speciality</th>
               <th className='rounded-tr-xl'>Medical ID</th>
