@@ -46,7 +46,7 @@ export default function AnalysisSection({ contacts, blogs, meetings, products })
           <thead>
             <tr>
               <th className='rounded-tl-xl'>Name</th>
-              <th>Phone</th>
+              <th>Mobil</th>
               <th>Email</th>
               <th className='rounded-tr-xl'>Message</th>
             </tr>

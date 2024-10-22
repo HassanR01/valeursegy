@@ -159,7 +159,7 @@ export default function NewsSction({ news }) {
                 <input type="text" name="keyword" id="keyword" value={keyword} onChange={(e) => setkeyword(e.target.value)} />
               </div>
               <div className="date">
-                <label htmlFor="date">Title:</label>
+                <label htmlFor="date">Date:</label>
                 <input type="date" name="date" id="date" value={date} onChange={(e) => setdate(e.target.value)} />
               </div>
             </div>
