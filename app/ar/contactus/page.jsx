@@ -2,7 +2,7 @@ import React from 'react'
 import TitleSection from '../../components/main/TitleSection';
 import HeaderAr from '@/app/components/main/HeaderAr';
 import FooterAr from '@/app/components/main/FooterAr';
-import HandleContactSend from '@/app/components/contact/HandleContactSend';
+import HandleContactSendAr from '@/app/components/contact/HandleContactSendAr';
 
 export const metadata = {
   title: "Valeurs - Contact Us",
@@ -16,7 +16,7 @@ export default function page() {
       <HeaderAr translate={'/contactus'} />
       <TitleSection title={`تواصل معنا`} />
       <section className='min-h-screen'>
-        <HandleContactSend />
+        <HandleContactSendAr />
       </section>
       <FooterAr />
     </>
