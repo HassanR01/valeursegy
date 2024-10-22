@@ -39,15 +39,14 @@ export default function Header({ translate }) {
   return (
     <motion.header
       animate={controls}
-      initial={{ opacity: 0, y: 20, backgroundColor: 'transparent' }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ backgroundColor: 'transparent' }}
       transition={{ duration: 0.5 }}
       className='fixed w-full h-[100px] top-0 left-0 flex flex-col items-center text-white justify-start z-[100] duration-500'
     >
 
       <div className="preMenu hidden lg:flex bg-black w-full p-1">
-        <nav>
-          <ul className='flex items-center justify-end'>
+        <nav className='w-full'>
+          <ul className='w-full flex items-center justify-end'>
             <li><TransitionLink className={`mx-4`} href={'/contactus'}>Contact Us</TransitionLink></li>
             <li><TransitionLink className={`mx-4`} href={'/partnerships'}>Partnerships</TransitionLink></li>
             <li><TransitionLink className={`mx-4`} href={'/careers'}>Careers</TransitionLink></li>

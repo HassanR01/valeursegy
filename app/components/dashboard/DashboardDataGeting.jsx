@@ -68,7 +68,7 @@ export default function DashboardDataGeting() {
                     cache: 'no-store'
                 })
 
-                const ressocialImpacts = await fetch('/api/social-impacts' , {
+                const ressocialImpacts = await fetch('/api/impacts' , {
                     cache: 'no-store'
                 })
 
@@ -148,7 +148,7 @@ export default function DashboardDataGeting() {
                     <>
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Analysis</h3>
-                            <AnalysisSection blogs={blogs} hcps={hcps} meetings={meetings} products={products} />
+                            <AnalysisSection blogs={blogs} hcps={hcps} meetings={meetings} products={products} contacts={contacts} />
                         </section>
                     </>
                 )}
@@ -172,7 +172,7 @@ export default function DashboardDataGeting() {
                     <>
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>News</h3>
-                            <NewsSction />
+                            <NewsSction news={news} />
                         </section>
                     </>
                 )}
@@ -180,7 +180,7 @@ export default function DashboardDataGeting() {
                     <>
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Social Impact</h3>
-                            <SocialImpactSection />
+                            <SocialImpactSection simpacts={socialImpacts} />
                         </section>
                     </>
                 )}
@@ -188,7 +188,7 @@ export default function DashboardDataGeting() {
                     <>
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Partnerships</h3>
-                            <PartnershipsSection />
+                            <PartnershipsSection partners={partnerships} />
                         </section>
                     </>
                 )}
@@ -212,7 +212,7 @@ export default function DashboardDataGeting() {
                     <>
                         <section className='w-[90%] h-screen overflow-y-auto flex flex-col items-center justify-start p-8'>
                             <h3 className='text-whiteColor font-bold mb-8 text-2xl'>Careers</h3>
-                            <CareersSection />
+                            <CareersSection careers={jobs} />
                         </section>
                     </>
                 )}

@@ -6,7 +6,7 @@ const hcpSchema = new Schema({
     email: String,
     phone: String,
     speciality: String,
-})
+}, {timestamps: true})
 
 const HCP = mongoose.models.HCP || mongoose.model('HCP', hcpSchema)
 

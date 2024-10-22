@@ -39,14 +39,20 @@ export default function Footer() {
                 <div className="input lg:min-w-[450px]">
                     <input type="email" name="email" id="email" placeholder='Enter Your Email' />
                 </div>
-                <div className="followUs my-8 flex flex-row items-start justify-center">
+                <div className="followUs w-full my-8 flex flex-row items-center justify-start">
                     <h4 className='text-mainColor text-xl font-medium'>Follow Us</h4>
+                    <div className="links ml-4 flex justify-around items-center flex-row">
+                        <Link className='mx-3' href={"https://www.facebook.com/valeurs.eg"} target='_blank'><Image src={'/facebookIcon.png'} width={30} height={30} alt='Facebook Icon' /></Link>
+                        <Link className='mx-3' href={"https://www.youtube.com/@ValeursEgypt"} target='_blank'><Image src={'/youtube.png'} width={30} height={30} alt='Tiktok Icon' /></Link>
+                        <Link className='mx-3' href={"https://www.instagram.com/valeurs.egypt"} target='_blank'><Image src={'/instagram.png'} width={30} height={30} alt='instagram Icon' /></Link>
+                        <Link className='mx-3' href={"http://linkedin.com/company/valeursegypt"} target='_blank'><Image src={'/linkedin.png'} width={30} height={30} alt='linkedin Icon' /></Link>
+                    </div>
                 </div>
             </div>
 
             <div className="w-full absolute bottom-0 left-0 flex mt-4 text-center flex-wrap items-center justify-around bg-white z-10 p-2">
                 <p>Copyright<sup>&copy;</sup>{year} <Link className='text-blue-600 font-semibold' href={'https://www.rockaidev.com'}>Rockai Dev</Link> | All Rights Reserved.</p>
-                <p><Link className='font-bold mx-2' href="/">Teams {`&`} conditions</Link> <Link className='font-bold mx-2' href="/">Privacy Policy</Link></p>
+                <p><Link className='font-bold mx-2' href="/">Terms {`&`} conditions</Link> <Link className='font-bold mx-2' href="/">Privacy Policy</Link></p>
             </div>
 
 

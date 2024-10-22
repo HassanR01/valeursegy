@@ -11,9 +11,9 @@ export default function MeetingSection({ meetings }) {
           <thead>
             <tr>
               <th className='rounded-tl-xl'>Name</th>
+              <th>Mobil</th>
               <th>Email</th>
-              <th>Phone</th>
-              <th>Position</th>
+              <th>Title</th>
               <th>Medical ID</th>
               <th className='rounded-tr-xl'>Message</th>
             </tr>
@@ -22,8 +22,8 @@ export default function MeetingSection({ meetings }) {
             {meetings.map((meetings, ind) => (
               <tr className='text-whiteColor cursor-pointer hover:bg-priColor duration-700' key={ind}>
                 <td>{meetings.name}</td>
-                <td>{meetings.email}</td>
                 <td>{meetings.phone}</td>
+                <td>{meetings.email}</td>
                 <td>{meetings.position}</td>
                 <td>{meetings.medId}</td>
                 <td>{meetings.message}</td>

@@ -7,6 +7,7 @@ const partnershipsSchema = new Schema({
     description: String,
     descriptionAr: String,
     link: String,
+    type: String
 })
 
 const Partnership = mongoose.models.Partnership || mongoose.model('Partnership', partnershipsSchema)

@@ -2,6 +2,7 @@ import React from 'react'
 import TitleSection from '../components/main/TitleSection';
 import Footer from '../components/main/Footer';
 import Header from '../components/main/Header';
+import HandleContactSend from '../components/contact/HandleContactSend';
 
 export const metadata = {
   title: "Valeurs - Contact Us",
@@ -14,8 +15,8 @@ export default function page() {
     <>
       <Header translate={'/ar/contactus'} />
       <TitleSection title={`Contact Valeurs`} />
-      <section className='min-h-screen'>
-
+      <section className=' mb-20 px-4'>
+        <HandleContactSend />
       </section>
       <Footer />
     </>

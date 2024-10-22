@@ -5,7 +5,7 @@ const contactsSchema = new Schema({
     phone: String,
     email: String,
     message: String,
-})
+}, {timestamps: true})
 
 const Contact = mongoose.models.Contact || mongoose.model('Contact', contactsSchema)
 

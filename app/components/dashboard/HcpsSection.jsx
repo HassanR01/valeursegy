@@ -10,20 +10,20 @@ export default function HcpsSection({ hcps }) {
           <thead>
             <tr>
               <th className='rounded-tl-xl'>Name</th>
+              <th>Mobil </th>
               <th>Email</th>
-              <th>Medical ID</th>
-              <th>Phone</th>
-              <th className='rounded-tr-xl'>Speciality</th>
+              <th>Speciality</th>
+              <th className='rounded-tr-xl'>Medical ID</th>
             </tr>
           </thead>
           <tbody>
             {hcps.map((hcp, ind) => (
               <tr className='text-whiteColor cursor-pointer hover:bg-priColor duration-700' key={ind}>
                 <td>{hcp.name}</td>
-                <td>{hcp.email}</td>
-                <td>{hcp.medId}</td>
                 <td>{hcp.phone}</td>
+                <td>{hcp.email}</td>
                 <td>{hcp.speciality}</td>
+                <td>{hcp.medId}</td>
               </tr>
             ))}
           </tbody>

@@ -7,6 +7,7 @@ const jobSchema = new Schema({
     jobTitle: String,
     jobTitleAr: String,
     jobType: String,
+    experience: String,
     jobTypeAr: String,
     location: String,
     details: String,

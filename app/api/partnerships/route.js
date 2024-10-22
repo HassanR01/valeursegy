@@ -3,9 +3,9 @@ import Partnership from "@/models/partnerships"
 import { NextResponse } from "next/server"
 
 export async function POST(req, { params }) {
-    const { name,nameAr, logo,description, descriptionAr, link } = await req.json()
+    const { name, nameAr, logo, description, descriptionAr, link, type } = await req.json()
     await connectMongoDB()
-    await Partnership.create({ name,nameAr, logo,description, descriptionAr, link })
+    await Partnership.create({ name, nameAr, logo, description, descriptionAr, link, type })
     return NextResponse.json({ message: 'Partner Created' }, { status: 201 })
 }
 

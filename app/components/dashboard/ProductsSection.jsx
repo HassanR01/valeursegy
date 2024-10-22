@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion'
 import HTMLReactParser from 'html-react-parser';
 import dynamic from 'next/dynamic'
-import Image from 'next/image';
 const JoditEditor = dynamic(() => import('jodit-react'), { ssr: false });
 import React, { useRef, useState } from 'react'
 

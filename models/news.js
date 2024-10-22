@@ -11,7 +11,7 @@ const newsSchema = new Schema({
     images: [],
     details: String,
     detailsAr: String,
-})
+}, {timestamps: true})
 
 const News = mongoose.models.News || mongoose.model('News', newsSchema)
 

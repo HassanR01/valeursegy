@@ -93,14 +93,14 @@ export default function Page() {
       <section id='meetourteam' className="section my-[80px] p-4 text-center flex flex-col items-center justify-center">
         <h1 className='text-center text-4xl font-bold mb-4'>تعرف علي فريقنا</h1>
         <p className='text-lg font-medium max-w-6xl'>وراء كل حل مبتكر  لدينا فريق من الخبراء المهنيين الشغوفين بها المجال، فريقنا يجمع بين الخبرة و التميز في مجالات الرعاية الصحية والتكنولوجيا وتقديم حلول مؤثرة من أجل مستقبل أكثر صحة.</p>
-        <div className="TeamList flex flex-wrap items-center justify-center my-5 p-4">
+        <div dir='rtl' className="TeamList flex flex-wrap items-center justify-center my-5 p-4">
 
           <div className="person1 relative w-[300px] h-[230px] flex flex-col items-center justify-end m-2">
             <div className="image w-[250] h-[250] rounded-tr-xl rounded-bl-xl absolute top-0 left-1/2 -translate-x-1/2 overflow-hidden ">
               <Image className='hover:scale-110 duration-700' src={'/person1.png'} width={300} height={300} alt='person Name' />
             </div>
             <div className="details hover:shadow-lg duration-700 border-2 border-whiteColor pt-20 p-2 rounded-tr-xl rounded-bl-xl flex flex-col items-center justify-center w-full">
-              <h4 className='text-xl font-bold text-center'>د/ محمد عسوي</h4>
+              <h4 className='text-xl font-bold text-center'>د/ محمود عيسوي</h4>
               <h6 className='text-xl'>الرئيس التنفيذي</h6>
             </div>
           </div>

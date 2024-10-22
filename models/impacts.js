@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose"
 
-const socialImpactsSchema = new Schema({
+const impactsSchema = new Schema({
     title: String,
     titleAr: String,
     keyword: String,
@@ -11,8 +11,8 @@ const socialImpactsSchema = new Schema({
     images: [],
     details: String,
     detailsAr: String,
-})
+}, {timestamps: true})
 
-const SocialImapct = mongoose.models.SocialImapct || mongoose.model('SocialImpact', socialImpactsSchema)
+const Impacts = mongoose.models.Impacts || mongoose.model('Impacts', impactsSchema)
 
-export default SocialImapct
+export default Impacts;
