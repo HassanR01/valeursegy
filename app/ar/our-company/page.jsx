@@ -72,14 +72,14 @@ export default function Page() {
 
       </section>
 
-      <section id='text' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
+      <section id='vision' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
         <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>رؤيتنا</h2>
         <p className='text-xl font-semibold lg:text-3xl mb-4'>هي أن نكون في مقدمة الشركات التي توفر حلول الرعاية الصحية الحديثة التي تمكّن الأفراد والمتخصصين في الرعاية الصحية على حد سواء.</p>
       </section>
       
 
       <h2 className='text-3xl lg:text-5xl my-10 font-bold'>تواجدنا عالمياً</h2>
-      <section id='ouroverview' className="section w-[95%] rounded-tr-xl rounded-bl-xl h-[50vh] mb-[80px] relative flex flex-col items-center justify-center overflow-hidden" style={{
+      <section id='Branches' className="section w-[95%] rounded-tr-xl rounded-bl-xl h-[50vh] mb-[80px] relative flex flex-col items-center justify-center overflow-hidden" style={{
         backgroundImage: `url(${BgHome.src})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: "start",
