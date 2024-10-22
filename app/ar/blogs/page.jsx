@@ -2,6 +2,7 @@ import React from 'react'
 import TitleSection from '../../components/main/TitleSection';
 import FooterAr from '@/app/components/main/FooterAr';
 import HeaderAr from '@/app/components/main/HeaderAr';
+import BlogsList from '@/app/components/blogs/BlogsList';
 
 export const metadata = {
   title: "Valeurs - Medical Blogs",
@@ -15,7 +16,7 @@ export default function page() {
       <HeaderAr translate={'/blogs'} />
       <TitleSection title={`مقالات عن الصحة العامة`} />
       <section className='min-h-screen'>
-
+        <BlogsList lang={'ar'} />
       </section>
       <FooterAr />
     </>

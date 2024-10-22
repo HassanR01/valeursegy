@@ -112,7 +112,7 @@ export default function ProductPage({ product, lang }) {
                             <>
                                 <Canvas>
                                     <Environment preset='city' />
-                                    <PerspectiveCamera makeDefault position={[0, 2, 8]} />
+                                    <PerspectiveCamera makeDefault position={[0, 3, 8]} />
                                     <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
                                     <BioPrint />
                                 </Canvas>

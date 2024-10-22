@@ -45,7 +45,7 @@ export default function PartnersList({ lang }) {
 
         return (
             <>
-                <h2 className='text-4xl mb-8 font-bold text-center text-whiteColor'>Companies</h2>
+                <h2 className='text-4xl mb-8 font-bold text-center text-whiteColor'>{lang === 'ar' ? "شركات" : "Companies"}</h2>
                 <div className="partnersList flex flex-wrap items-center justify-around">
                     {filterPartner('Company').map((partner, ind) => (
                         <motion.div
@@ -56,14 +56,14 @@ export default function PartnersList({ lang }) {
                         >
                             <Image src={partner.logo} width={50} height={50} alt={partner.name} />
                             <h3 className='text-2xl font-semibold mt-4'>{lang === 'ar' ? partner.nameAr : partner.name}</h3>
-                            <p className='text-center'>{lang === 'ar' ? partner.descriptionAR : partner.description}</p>
+                            <p className='text-center'>{lang === 'ar' ? partner.descriptionAr : partner.description}</p>
                             <div className="link w-full flex items-center justify-center">
-                                <Link href={partner.link} className="btnForm" target='_blank'>Learn More</Link>
+                                <Link href={partner.link} className="btnForm" target='_blank'>{lang === 'ar' ? 'لمعرفة المزيد' :"Learn More"}</Link>
                             </div>
                         </motion.div>
                     ))}
                 </div>
-                <h2 className='text-4xl my-8 font-bold text-center text-whiteColor'>Clinics</h2>
+                <h2 className='text-4xl my-8 font-bold text-center text-whiteColor'>{lang === 'ar' ? "عيادات" : "Clinics"}</h2>
                 <div className="partnersList flex flex-wrap items-center justify-around">
                     {filterPartner('Clinic').map((partner, ind) => (
                         <motion.div
@@ -74,9 +74,9 @@ export default function PartnersList({ lang }) {
                         >
                             <Image src={partner.logo} width={50} height={50} alt={partner.name} />
                             <h3 className='text-2xl font-semibold mt-4'>{lang === 'ar' ? partner.nameAr : partner.name}</h3>
-                            <p className='text-center'>{lang === 'ar' ? partner.descriptionAR : partner.description}</p>
+                            <p className='text-center'>{lang === 'ar' ? partner.descriptionAr : partner.description}</p>
                             <div className="link w-full flex items-center justify-center">
-                                <Link href={partner.link} className="btnForm" target='_blank'>Learn More</Link>
+                                <Link href={partner.link} className="btnForm" target='_blank'>{lang === 'ar' ? 'لمعرفة المزيد' :"Learn More"}</Link>
                             </div>
                         </motion.div>
                     ))}

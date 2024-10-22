@@ -13,7 +13,7 @@ export default function MenuBar({ lang }) {
                             <li className='text-whiteColor mx-4 cursor-pointer font-bold text-lg'><TransitionLink className={`py-1 px-4 flex items-center justify-center`} href={'/ar/our-company'}>شركتنا</TransitionLink></li>
                             <li className='text-whiteColor mx-4 cursor-pointer font-bold text-lg'><TransitionLink className={`py-1 px-4 flex items-center justify-center`} href={'/ar/wellness'}>حلولنا للصحة العامة</TransitionLink></li>
                             <li className='text-whiteColor mx-4 cursor-pointer font-bold text-lg'><TransitionLink className={`py-1 px-4 flex items-center justify-center`} href={'/ar/blogs'}>مقالات</TransitionLink></li>
-                            <li className='text-whiteColor mx-4 cursor-pointer font-bold text-lg'><TransitionLink className={`py-1 px-4 flex items-center justify-center`} href={'/ar/news'}>اخبارنا</TransitionLink></li>
+                            <li className='text-whiteColor mx-4 cursor-pointer font-bold text-lg'><TransitionLink className={`py-1 px-4 flex items-center justify-center`} href={'/ar/news'}>أخبارنا</TransitionLink></li>
                         </ul>
                     </nav>
 

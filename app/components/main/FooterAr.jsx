@@ -1,13 +1,43 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import bgFooter from '../../../public/FooterBg.jpg'
 import Image from 'next/image'
 import TransitionLink from './TransitionLink'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function FooterAr() {
     let date = new Date()
     let year = date.getFullYear()
+    const router = useRouter()
+    const [email, setemail] = useState('')
+
+    const SendContact = async () => {
+        if (email) {
+            confirm('سوف يتم ارسال بريد الكتروني لمساعدتك علي استكشاف شركتنا بشكل افضل')
+            try {
+                const res = await fetch('/api/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify({email})
+                })
+
+                if (res.ok) {
+                    setemail('')
+                    router.push('/ar/contactus/thanks')
+                }
+            } catch (error) {
+                console.log(error);
+
+            }
+        } else {
+            alert('Add Your Email')
+        }
+
+
+    }
 
     return (
         <footer dir='rtl' className='w-full p-8 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between relative min-h-[50vh]' style={{
@@ -30,14 +60,15 @@ export default function FooterAr() {
                 <h2 className='text-2xl font-bold text-mainColor mb-4'>روابط مختصرة</h2>
                 <ul className='flex flex-col items-center justify-center lg:items-start lg:justify-start'>
                     <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/ar/our-company'}>عن شركتنا</TransitionLink></li>
-                    <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/ar/news'}>اخبارنا</TransitionLink></li>
+                    <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/ar/news'}>أخبارنا</TransitionLink></li>
                     <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/ar/blogs'}>مقالاتنا</TransitionLink></li>
                 </ul>
             </div>
             <div className="links flex my-8 flex-col items-center text-center lg:text-start lg:items-start justify-center z-10">
                 <h2 className='text-xl font-bold text-mainColor mb-4'>شاركنا النجاح و الاخبار الجديدة</h2>
                 <div className="input lg:min-w-[450px]">
-                    <input type="email" name="email" id="email" placeholder='Enter Your Email' />
+                    <input type="email" name="email" id="email" placeholder='Enter Your Email' value={email} onChange={(e) => setemail(e.target.value)} />
+                    <div onClick={() => SendContact()} className=" w-[300px] text-whiteColor cursor-pointer mt-3 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400 bg-mainColor">إرسال</div>
                 </div>
                 <div className="followUs w-full my-8 flex flex-row items-center justify-start">
                     <h4 className='text-mainColor text-xl font-medium'>تابعنا علي</h4>

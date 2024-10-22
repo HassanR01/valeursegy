@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import OurCompany from '../../../public/bgOurCompany.jpg'
 import React from 'react'
 
-export default function TitleSection({title, description}) {
+export default function TitleSection({title, description , lang}) {
 
   return (
       <>
