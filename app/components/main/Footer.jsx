@@ -68,7 +68,7 @@ export default function Footer() {
                 <h2 className='text-xl font-bold text-mainColor mb-4'>Subscribe for our latest news and updates</h2>
                 <div className="input lg:min-w-[450px]">
                     <input type="email" name="email" id="email" placeholder='Enter Your Email' value={email} onChange={(e) => setemail(e.target.value)} />
-                    <div onClick={() => SendContact()} className=" w-[300px] text-whiteColor cursor-pointer mt-3 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400 bg-mainColor">Send</div>
+                    <div onClick={() => SendContact()} className=" w-[300px] text-whiteColor cursor-pointer mt-3 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400 bg-mainColor">Subscribe</div>
                 </div>
                 <div className="followUs w-full my-8 flex flex-row items-center justify-start">
                     <h4 className='text-mainColor text-xl font-medium'>Follow Us</h4>
