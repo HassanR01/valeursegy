@@ -2,39 +2,63 @@ import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations, Html } from '@react-three/drei'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useThree } from '@react-three/fiber'
+import { useLoader, useThree } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 import Image from 'next/image'
 
 export function Env(props) {
-    const group = useRef()
-    const { nodes, materials, animations } = useGLTF('/plane.gltf')
-    const router = useRouter()
-    const { gl } = useThree()
-    const { actions } = useAnimations(animations, group)
+    const modelAnimated = useGLTF('/plane.glb')
+    
+    
+    
+    const model = useLoader(GLTFLoader, '/plane.glb', (loader) => {
+        const dracoLoader = new DRACOLoader()
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+        loader.setDRACOLoader(dracoLoader)
+    })
 
-
+    const animation = useAnimations(model.animations, model.scene)
+    
     useEffect(() => {
-
-        const desiredSpeed = 0.3
-
-
-        Object.values(actions).forEach(action => {
-            action.setEffectiveTimeScale(desiredSpeed).play()
-        })
-
+        // Play all animations slower
+        animation.actions &&
+            Object.values(animation.actions).forEach((action) => {
+                action.timeScale = 0.5; // Set to 0.5 for half the speed
+                action.reset().play();
+            });
 
         return () => {
-            Object.values(actions).forEach(action => {
-                if (action) {
-                    action.stop()
-                }
-            })
-        }
-    }, [actions])
+            // Stop all animations when the component unmounts
+            animation.actions &&
+                Object.values(animation.actions).forEach((action) => {
+                    action.stop();
+                });
+        };
+    }, [animation.actions]);
+
+    // useEffect(() => {
+
+    //     const desiredSpeed = 0.3
+
+
+    //     Object.values(actions).forEach(action => {
+    //         action.setEffectiveTimeScale(desiredSpeed).play()
+    //     })
+
+
+    //     return () => {
+    //         Object.values(actions).forEach(action => {
+    //             if (action) {
+    //                 action.stop()
+    //             }
+    //         })
+    //     }
+    // }, [actions])
 
 
     return (
-        <group ref={group} {...props} dispose={null}>
+        <>
 
             <ambientLight intensity={0.5} color={"#ffffff"} />
 
@@ -56,7 +80,7 @@ export function Env(props) {
             />
 
             <directionalLight
-                intensity={2.5}
+                intensity={1.5}
                 castShadow={true}
                 color={"#ffffff"}
                 position={[0, 120, 0]}
@@ -115,7 +139,10 @@ export function Env(props) {
                 </Link>
             </Html>
 
+        <primitive object={model.scene} scale={1} position-y={0} />
 
+
+{/* 
             <group name="Scene">
                 <group name="C-Component#7" position={[0.553, -0.158, -1.585]} rotation={[Math.PI, -0.227, 0]} scale={-0.051}>
                     <group name="C-Component#12" />
@@ -185,12 +212,12 @@ export function Env(props) {
                     <mesh name="Circle004" geometry={nodes.Circle004.geometry} material={materials['Material.074']} position={[-0.771, -1.001, 0.327]} scale={[0.086, 0.062, 0.086]} />
                     <mesh name="Circle005" geometry={nodes.Circle005.geometry} material={materials['Material.074']} position={[-0.771, -1.001, -0.281]} scale={[0.086, 0.062, 0.086]} />
                     <mesh name="Circle006" geometry={nodes.Circle006.geometry} material={materials['Material.074']} position={[0.786, -1.001, 0.327]} scale={[0.086, 0.062, 0.086]} />
-                    <mesh name="Circle007" geometry={nodes.Circle007.geometry} material={materials['Material.074']} position={[0.786, -1.001, -0.281]} scale={[0.086, 0.062, 0.086]} />
+                    <mesh name="Circle007" geometry={nodes.Circle007.geometry} material={materials['Material.074']} position={[0.786, -1.001, -0.281]} scale={[0.086, 0.062, 0.086]} /> */}
                     {/* <group name="Circle008" position={[1.009, -0.759, -0.008]} rotation={[Math.PI, 0, -Math.PI / 2]} scale={[-0.062, -0.086, -0.086]}>
                         <mesh name="Mesh_13" geometry={nodes.Mesh_13.geometry} material={materials['Material.072']} />
                         <mesh name="Mesh_14" geometry={nodes.Mesh_14.geometry} material={materials['Material.073']} />
                     </group> */}
-                    <mesh name="Cube001" geometry={nodes.Cube001.geometry} material={materials['Material.014']} position={[-0.973, 0.284, 0.249]} rotation={[0, 0.187, 0]} scale={[0.062, 0.067, 0.092]} />
+                    {/* <mesh name="Cube001" geometry={nodes.Cube001.geometry} material={materials['Material.014']} position={[-0.973, 0.284, 0.249]} rotation={[0, 0.187, 0]} scale={[0.062, 0.067, 0.092]} />
                     <mesh name="Cube025" geometry={nodes.Cube025.geometry} material={materials['Material.003']} position={[-0.973, -0.27, 0.249]} rotation={[0, 0.187, 0]} scale={[0.062, 0.067, 0.092]} />
                     <mesh name="Cube026" geometry={nodes.Cube026.geometry} material={materials['Material.067']} position={[0.335, -0.455, -0.37]} scale={[0.28, 0.003, 0.252]} />
                     <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.068']} position={[-0.567, 0.266, -0.334]} scale={[0.139, 0.152, 0.02]} />
@@ -374,9 +401,9 @@ export function Env(props) {
                     }}
                     onClick={() => router.push(`${props.lang === 'ar' ? '/ar' : ""}/our-company`)}
                     geometry={nodes.valeurs_logo.geometry} material={materials['Material.013']} position={[-1.082, -0.035, 2.219]} scale={4.831} />
-            </group>
-        </group>
+            </group> */}
+        </>
     )
 }
 
-useGLTF.preload('/plane.gltf')
+useGLTF.preload('/plane.glb')
