@@ -90,7 +90,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-whiteColor bg-opacity-90 filter"></div>
       </section>
 
-      <section id='meetourteam' className="section my-[80px] p-4 text-center flex flex-col items-center justify-center">
+      {/* <section id='meetourteam' className="section my-[80px] p-4 text-center flex flex-col items-center justify-center">
         <h1 className='text-center text-4xl font-bold mb-4'>Meet Our Team</h1>
         <p className='text-lg font-medium max-w-6xl'>Behind every innovative solution at Valeurs is a team of passionate professionals committed to excellence. Our diverse team brings together expertise in healthcare, technology, and wellness to create impactful solutions for a healthier future.</p>
         <div className="TeamList flex flex-wrap items-center justify-center my-5 p-4">
@@ -134,10 +134,9 @@ export default function Page() {
               <h6 className='text-xl'>Sales Manager</h6>
             </div>
           </div>
-
-
         </div>
-      </section>
+      </section> */}
+      
       <Footer />
     </>
   )

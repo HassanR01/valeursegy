@@ -28,6 +28,21 @@ export default function BranchesMap() {
         }, {
             name: "India",
             location: [21.613939, 77.209023]
+        }, {
+            name: 'kSA',
+            location: [23.885942, 45.079163]
+        }, {
+            name: 'Greece',
+            location: [39.074208, 21.824312]
+        }, {
+            name: 'NiGeria',
+            location: [9.0820, 8.6753]
+        }, {
+            name: "South Africa",
+            location: [-30.5595, 22.9375]
+        }, {
+            name: "TanZania",
+            location: [-6.3690, 34.8888]
         }
     ]
 
