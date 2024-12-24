@@ -34,15 +34,15 @@ export default function Page() {
 
           <div className="counter flex items-center justify-around flex-wrap w-full">
             <div className="part flex flex-col items-center justify-center m-4">
-              <h2 className="text-5xl text-mainColor font-bold">+<AnimatedNumber number={15} /></h2>
+              <h2 className="text-5xl flex flex-row items-center justify-center text-mainColor font-bold">+<AnimatedNumber number={30} /></h2>
               <h3 className="text-3xl font-medium text-mainColor">Partnerships</h3>
             </div>
             <div className="part flex flex-col items-center justify-center m-4">
-              <h2 className="text-5xl text-mainColor font-bold">+<AnimatedNumber number={20000} /></h2>
+              <h2 className="text-5xl flex flex-row items-center justify-center text-mainColor font-bold">+<AnimatedNumber number={250000} /></h2>
               <h3 className="text-3xl font-medium text-mainColor">Cured Patient</h3>
             </div>
             <div className="part flex flex-col items-center justify-center m-4">
-              <h2 className="text-5xl text-mainColor font-bold">+<AnimatedNumber number={60} /></h2>
+              <h2 className="text-5xl flex flex-row items-center justify-center text-mainColor font-bold">+<AnimatedNumber number={120} /></h2>
               <h3 className="text-3xl font-medium text-mainColor">Social Activity</h3>
             </div>
           </div>
@@ -52,9 +52,10 @@ export default function Page() {
       </section>
 
       <section id='text' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
-        <h2 className='text-xl lg:text-3xl font-bold'>At Valeurs, our mission is to lead the way in wellness by delivering innovative medical solutions that enhance the quality of life</h2>
-        <p className='text-xl font-semibold lg:text-2xl mb-4'>Leveraging cutting-edge AI technologies</p>
-        <p className='text-xl max-w-6xl'>we empower healthcare professionals to achieve better patient outcomes and support a healthier future for all. Our commitment is to provide top-tier products and services that ensure every individual has access to exceptional medical care and wellness opportunities.</p>
+        <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>Our Mission</h2>
+        <h2 className='text-xl lg:text-3xl font-semibold mb-4'>At Valeurs, we are committed to revolutionizing healthcare in the Middle East and beyond by integrating cutting-edge medical AI and wellness solutions</h2>
+        {/* <p className='text-xl font-semibold lg:text-2xl mb-4'>Leveraging cutting-edge AI technologies</p> */}
+        <p className='text-xl max-w-6xl'>Through our advanced technologies, including autologous treatment protocols, stem cell applications, and pharmaceutical compounding, we aim to empower healthcare providers and improve patient outcomes. Guided by innovation, excellence, and compassion, we strive to make world-class healthcare accessible and transformative.</p>
       </section>
 
       <section
@@ -66,14 +67,14 @@ export default function Page() {
         }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
-        <h2 className='lg:text-6xl text-3xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6 px-2'>We are ambassadors of wellness</h2>
+        <h2 className='lg:text-6xl text-3xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6 px-2'>Become Our Wellness ambassador</h2>
 
       </section>
 
       <section id='text' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
         <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>Our Vision</h2>
-        <p className='text-xl font-semibold lg:text-3xl mb-4'>Our vision at Valeurs is to revolutionize wellness by harnessing innovative medical technologies</p>
-        <p className='text-xl max-w-6xl'>As leaders and ambassadors of wellness, we are committed to enhancing the quality of life with AI-driven solutions, empowering healthcare professionals and individuals alike to achieve excellence in healthcare.</p>
+        <p className='text-xl font-semibold lg:text-3xl mb-4'>To be the leading global provider of medical AI and wellness solutions, setting new benchmarks for healthcare innovation and accessibility.</p>
+        <p className='text-xl max-w-6xl'>By leveraging the latest technologies and fostering partnerships across Egypt, the UAE, Jordan, Greece, and the USA, we aspire to redefine the future of health and wellness in the Middle East and create a lasting impact on global healthcare standards.</p>
       </section>
       
 

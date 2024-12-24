@@ -34,15 +34,15 @@ export default function Page() {
 
           <div className="counter flex items-center justify-around flex-wrap w-full">
             <div className="part flex flex-col items-center justify-center m-4">
-              <h2 className="text-5xl text-mainColor font-bold">+<AnimatedNumber number={15} /></h2>
+              <h2 className="text-5xl flex flex-row items-center justify-center text-mainColor font-bold">+<AnimatedNumber number={30} /></h2>
               <h3 className="text-3xl font-medium text-mainColor">شركاء النجاح</h3>
             </div>
             <div className="part flex flex-col items-center justify-center m-4">
-              <h2 className="text-5xl text-mainColor font-bold">+<AnimatedNumber number={20000} /></h2>
+              <h2 className="text-5xl flex flex-row items-center justify-center text-mainColor font-bold">+<AnimatedNumber number={250000} /></h2>
               <h3 className="text-3xl font-medium text-mainColor">مريض مستفيد</h3>
             </div>
             <div className="part flex flex-col items-center justify-center m-4">
-              <h2 className="text-5xl text-mainColor font-bold">+<AnimatedNumber number={60} /></h2>
+              <h2 className="text-5xl flex flex-row items-center justify-center text-mainColor font-bold">+<AnimatedNumber number={120} /></h2>
               <h3 className="text-3xl font-medium text-mainColor">حدث اجتماعي</h3>
             </div>
           </div>

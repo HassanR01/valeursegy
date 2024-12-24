@@ -21,7 +21,13 @@ export default function BranchesMap() {
             location: [48.86701719193213, 2.307817967512028]
         }, {
             name: "USA",
-            location: [40.726364, -73.859584]
+            location: [40.726364, -79.859584]
+        }, {
+            name: "Brazil",
+            location: [-19.550520, -46.633308]
+        }, {
+            name: "India",
+            location: [21.613939, 77.209023]
         }
     ]
 

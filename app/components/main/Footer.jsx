@@ -59,8 +59,8 @@ export default function Footer() {
             <div className="quickLinks my-8 flex flex-col items-center lg:items-start justify-center z-10">
                 <h2 className='text-2xl font-bold text-mainColor mb-4'>Quick Links</h2>
                 <ul className='flex flex-col items-center justify-center lg:items-start lg:justify-start'>
-                    <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/our-company'}>Our Company</TransitionLink></li>
-                    <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/news'}>Our News</TransitionLink></li>
+                    <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/our-company'}>Company</TransitionLink></li>
+                    <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/news'}>News</TransitionLink></li>
                     <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/blogs'}>Blogs</TransitionLink></li>
                 </ul>
             </div>

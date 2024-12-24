@@ -6,7 +6,11 @@ const AnimatedNumber = ({ number }) => {
     const [isInView, setIsInView] = useState(false);
     const ref = useRef(null);
     const motionValue = useMotionValue(0);
-    const roundedValue = useTransform(motionValue, latest => Math.round(latest));
+
+    // Format the number with dots
+    const formattedValue = useTransform(motionValue, (latest) =>
+        new Intl.NumberFormat('en-US').format(Math.round(latest))
+    );
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -34,7 +38,7 @@ const AnimatedNumber = ({ number }) => {
     useEffect(() => {
         if (isInView) {
             const controls = animate(motionValue, number, {
-                duration: 3,
+                duration: 2,
                 ease: "easeOut",
             });
             return controls.stop;
@@ -42,9 +46,9 @@ const AnimatedNumber = ({ number }) => {
     }, [isInView, number, motionValue]);
 
     return (
-        <motion.span ref={ref} className='font-semibold text-7xl'>
-            {roundedValue}
-        </motion.span>
+        <motion.div ref={ref} className='font-semibold mx-1 text-mainColor text-6xl'>
+            {formattedValue}
+        </motion.div>
     );
 };
 
