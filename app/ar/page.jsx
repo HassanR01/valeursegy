@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 import AnimatedNumber from "./../components/main/AnimateNumber";
 import HeaderAr from "../components/main/HeaderAr";
 
+
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const sections = ['#home', '#plane']
