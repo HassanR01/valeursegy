@@ -9,6 +9,15 @@ export const metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    title: "Valeurs",
+    description: "Smart Solutions for Lifelong Wellness. To be the leading global provider of medical AI and wellness solutions, setting new benchmarks for healthcare innovation and accessibility, By leveraging the latest technologies and fostering partnerships across Egypt, the UAE, Jordan, Greece, and the USA, we aspire to redefine the future of health and wellness in the Middle East and create a lasting impact on global healthcare standards.",
+    image: '/logoWhite.png',
+    url: 'https://valeursegy.vercel.app',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Valeurs'
+  }
 };
 
 export default function RootLayout({ children }) {

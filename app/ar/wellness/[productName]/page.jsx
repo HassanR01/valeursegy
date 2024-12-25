@@ -21,6 +21,26 @@ const GetProduct = async (model) => {
     }
 }
 
+export async function generateMetadata({ params }) {
+    const { productName } = params
+    const { product } = await GetProduct(productName)
+
+    // Data Arabic
+    return {
+        title: `ڤالورز - ${product.nameAr}`,
+        description: `${product.descriptionAr}`,
+        openGraph: {
+            title: `ڤالورز - ${product.nameAr}`,
+            description: `${product.descriptionAr}`,
+            image: '/logoWhite.png',
+            url: `https://valeursegy.vercel.app/ar/wellness/${productName}`,
+            type: 'website',
+            locale: 'ar_AR',
+            siteName: 'ڤالورز'
+        }
+    }
+}
+
 
 
 export default async function Page({ params }) {

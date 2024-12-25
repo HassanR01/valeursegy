@@ -21,6 +21,26 @@ const GetProduct = async (model) => {
     }
 }
 
+// Generate metadata
+export async function generateMetadata({params}) {
+    const { productName } = params
+    const { product } = await GetProduct(productName)
+
+    return {
+        title: `Valeurs - ${product.name}`,
+        description: `${product.description}`,
+        openGraph: {
+            title: `Valeurs - ${product.name}`,
+            description: `${product.description}`,
+            image: '/logoWhite.png',
+            url: `https://valeursegy.vercel.app/wellness/${productName}`,
+            type: 'website',
+            locale: 'en_US',
+            siteName: 'Valeurs'
+        }
+    }
+}
+
 
 
 export default async function Page({ params }) {

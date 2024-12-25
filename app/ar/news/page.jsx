@@ -4,6 +4,20 @@ import HeaderAr from '@/app/components/main/HeaderAr'
 import FooterAr from '@/app/components/main/FooterAr'
 import NewsList from '@/app/components/news/NewsList'
 
+export const metadata = {
+  title: "ڤالورز - اخبارنا",
+  description: "كن على اطلاع بأحدث التطورات في فالورز. اكتشف كيف تساهم ابتكاراتنا في إحداث فرق في مجال العافية.",
+  openGraph: {
+    title: "ڤالورز - اخبارنا",
+    description: "كن على اطلاع بأحدث التطورات في فالورز. اكتشف كيف تساهم ابتكاراتنا في إحداث فرق في مجال العافية.",
+    image: '/logoWhite.png',
+    url: 'https://valeursegy.vercel.app/ar/news',
+    type: 'website',
+    locale: 'ar_AR',
+    siteName: 'ڤالورز'
+  }
+};
+
 export default function page() {
   return (
     <>

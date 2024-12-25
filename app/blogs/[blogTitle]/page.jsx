@@ -19,6 +19,25 @@ const GetBlog = async (id) => {
   }
 }
 
+export async function generateMetadata({ params }) {
+  const { blogTitle } = params
+  const { blog } = await GetBlog(blogTitle)
+
+  return {
+    title: `Valeurs - ${blog.title}`,
+    description: `${blog.description}`,
+    openGraph: {
+      title: `Valeurs - ${blog.title}`,
+      description: `${blog.description}`,
+      image: '/logoWhite.png',
+      url: `https://valeursegy.vercel.app/blogs/${blogTitle}`,
+      type: 'website',
+      locale: 'en_US',
+      siteName: 'Valeurs'
+    }
+  }
+}
+
 export default async function page({ params }) {
   const { blogTitle } = params
   const { blog } = await GetBlog(blogTitle)

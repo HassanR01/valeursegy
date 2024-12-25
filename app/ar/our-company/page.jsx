@@ -14,6 +14,15 @@ const BranchesMap = dynamic(() => import('../../components/map/BranchesMap'), {
 export const metadata = {
   title: "عن ڤالورز",
   description: "نحن في شركة فالورز مهتمون بتزويد المجتمع بأحدث الأجهزة الطبية التي تشمل العمل بالذكاء الإصطناعي و التي يمكنها خدمة الصحة العامة للمجتمع ، حيث نكون سفراء لمجال الصحة العامة في الشرق الأوسط",
+  openGraph: {
+    title: "عن ڤالورز",
+    description: "نحن في شركة فالورز مهتمون بتزويد المجتمع بأحدث الأجهزة الطبية التي تشمل العمل بالذكاء الإصطناعي و التي يمكنها خدمة الصحة العامة للمجتمع ، حيث نكون سفراء لمجال الصحة العامة في الشرق الأوسط",
+    image: '/logoWhite.png',
+    url: 'https://valeursegy.vercel.app/our-company',
+    type: 'website',
+    locale: 'ar_AR',
+    siteName: 'فالورز'
+  }
 };
 
 
