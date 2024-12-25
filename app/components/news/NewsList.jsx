@@ -3,33 +3,13 @@ import React, { useEffect, useState } from 'react'
 import Loading from '../main/Loading'
 import Image from 'next/image'
 import TransitionLink from '../main/TransitionLink'
+import { useDataContext } from '../Context/DataContext'
 
 export default function NewsList({lang}) {
-    const [isloading, setIsloading] = useState(true)
-    const [news, setnews] = useState([])
 
-    useEffect(() => {
-        const Getnews = async () => {
-            try {
-                const res = await fetch('/api/news', {
-                    cache: 'no-store'
-                })
+    const { news } = useDataContext()
 
-                const news = await res.json()
-                setnews(news.news)
-
-            } catch (error) {
-                console.log(error);
-
-            } finally {
-                setIsloading(false)
-            }
-        }
-
-        Getnews()
-    }, [])
-
-    if (!isloading) {
+    if (news) {
         return (
             <>
                 <div className="newsList w-full flex flex-wrap items-center justify-around">

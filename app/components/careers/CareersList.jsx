@@ -3,32 +3,14 @@ import React, { useEffect, useState } from 'react'
 import Loading from '../main/Loading'
 import TransitionLink from '../main/TransitionLink'
 import Link from 'next/link'
+import { useDataContext } from '../Context/DataContext'
 
 export default function CareersList({ lang }) {
     const [isLoading, setIsLoading] = useState(true)
-    const [careers, setCareers] = useState(null)
 
-    useEffect(() => {
-        const GetCareers = async () => {
-            try {
-                const res = await fetch('/api/careers', {
-                    cache: 'no-store'
-                })
+    const { careers } = useDataContext()
 
-                const careers = await res.json()
-                setCareers(careers.jobs)
-
-            } catch (error) {
-                console.log(error);
-            } finally {
-                setIsLoading(false)
-            }
-        }
-
-        GetCareers()
-    }, [])
-
-    if (!isLoading) {
+    if (careers) {
         return (
             <>
                 <div className="careersList lg:p-8 h-full w-full flex flex-wrap items-center lg:items-start justify-center lg:justify-start">

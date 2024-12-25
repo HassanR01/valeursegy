@@ -3,33 +3,16 @@ import React, { useEffect, useState } from 'react'
 import Loading from '../main/Loading'
 import Image from 'next/image'
 import TransitionLink from '../main/TransitionLink'
+import { useDataContext } from '../Context/DataContext'
 
 export default function BlogsList({ lang }) {
     const [isloading, setIsloading] = useState(true)
-    const [blogs, setBlogs] = useState([])
+    
+    const { blogs } = useDataContext()
 
-    useEffect(() => {
-        const GetBlogs = async () => {
-            try {
-                const res = await fetch('/api/blogs', {
-                    cache: 'no-store'
-                })
 
-                const blogs = await res.json()
-                setBlogs(blogs.blogs)
 
-            } catch (error) {
-                console.log(error);
-
-            } finally {
-                setIsloading(false)
-            }
-        }
-
-        GetBlogs()
-    }, [])
-
-    if (!isloading) {
+    if (blogs) {
         return (
             <>
                 <div className="blogsList w-full flex flex-wrap items-center justify-around">

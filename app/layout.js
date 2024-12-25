@@ -1,4 +1,4 @@
-import Header from "./components/main/Header";
+import DataProvider from "./components/Context/DataContext";
 import "./globals.css";
 
 
@@ -10,8 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-mainColor font-mainFont flex items-center justify-center flex-col">
-        {children}
+      <body className="bg-mainColor font-mainFont flex items-center justify-center flex-col" suppressHydrationWarning={true}>
+        <DataProvider>
+          {children}
+        </DataProvider>
       </body>
     </html>
   );

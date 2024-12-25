@@ -4,37 +4,15 @@ import React, { useEffect, useState } from 'react'
 import Loading from '../main/Loading'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useDataContext } from '../Context/DataContext'
 
 export default function PartnersList({ lang }) {
-    const [isLoading, setIsLoading] = useState(true)
-    const [partners, setPartners] = useState(null)
+    const { partenerShips } = useDataContext()
 
-    useEffect(() => {
-        const GetPartner = async () => {
-            try {
-                const res = await fetch('/api/partnerships', {
-                    cache: 'no-store'
-                })
-
-                const partners = await res.json()
-                setPartners(partners.partner)
-
-            } catch (error) {
-                console.log(error);
-            } finally {
-                setIsLoading(false)
-            }
-        }
-
-        GetPartner()
-
-    }, [])
-
-
-    if (!isLoading) {
+    if (partenerShips) {
 
         const filterPartner = (type) => {
-            const wantedpartners = partners.filter(partner => {
+            const wantedpartners = partenerShips.filter(partner => {
                 const matchedtype = partner.type === type
 
                 return matchedtype

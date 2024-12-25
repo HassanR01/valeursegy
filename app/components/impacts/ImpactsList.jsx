@@ -6,30 +6,10 @@ import TransitionLink from '../main/TransitionLink'
 
 export default function ImpactsList({ lang }) {
     const [isloading, setIsloading] = useState(true)
-    const [impacts, setimpacts] = useState([])
 
-    useEffect(() => {
-        const Getimpacts = async () => {
-            try {
-                const res = await fetch('/api/impacts', {
-                    cache: 'no-store'
-                })
+    const { impacts } = useDataContext()
 
-                const impacts = await res.json()
-                setimpacts(impacts.socialimpacts)
-
-            } catch (error) {
-                console.log(error);
-
-            } finally {
-                setIsloading(false)
-            }
-        }
-
-        Getimpacts()
-    }, [])
-
-    if (!isloading) {
+    if (impacts) {
         return (
             <>
                 <div className="impactsList w-full flex flex-wrap items-center justify-around">
