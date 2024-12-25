@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Loading from '../main/Loading'
 import Image from 'next/image'
 import TransitionLink from '../main/TransitionLink'
+import { useDataContext } from '../Context/DataContext'
 
 export default function ImpactsList({ lang }) {
     const [isloading, setIsloading] = useState(true)
