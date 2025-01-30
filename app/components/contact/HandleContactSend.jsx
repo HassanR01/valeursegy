@@ -76,13 +76,13 @@ export default function HandleContactSend() {
                 <div className="contactInfo flex flex-col items-start justify-center mt-4 lg:mx-10">
                     <h2 className='text-2xl mb-4 font-bold text-whiteColor'>Contact Info</h2>
                     <div className="info mb-4">
-                        <h4 className='text-lg font-medium'>Mobil: <span className='font-light'>01234567890</span></h4>
+                        <h4 className='text-lg font-medium'>Mobil: <span className='font-light'>(+20) 1004291945</span></h4>
                         <h4 className='text-lg font-medium'>Email: <span className='font-light'>info@valeursegy.com</span></h4>
                         <h4 className='text-lg font-medium'>Locations:</h4>
-                        <p className='ml-4'><span className='text-lg font-semibold'>Egypt:</span> Cairo - Fifth Settlement</p>
-                        <p className='ml-4'><span className='text-lg font-semibold'>France:</span> Paris</p>
-                        <p className='ml-4'><span className='text-lg font-semibold'>UAE:</span> Dubai</p>
-                        <p className='ml-4'><span className='text-lg font-semibold'>USA:</span> New York</p>
+                        <p className='ml-4 max-w-sm'><span className='text-lg font-semibold'>Egypt:</span> Villa 174, Elyasmeen1, 5th settlement, Cairo</p>
+                        <p className='ml-4 max-w-sm'><span className='text-lg font-semibold'>UAE:</span> Office no. 21, Arenco Tower, Dubai MediaCity</p>
+                        <p className='ml-4 max-w-sm'><span className='text-lg font-semibold'>France:</span> 1 TER rue de la Garrigue - ZA du Bosc 34130 Mudaison</p>
+                        <p className='ml-4 max-w-sm'><span className='text-lg font-semibold'>USA:</span> 347 Fifth Avenue Suite 1402-598 New York, NY 10016</p>
                     </div>
                     <h2 className='text-2xl mb-4 font-bold text-whiteColor'>Social Media</h2>
                     <div className="links mb-4 w-full flex justify-around items-center flex-row">

@@ -43,6 +43,9 @@ export default function BranchesMap() {
         }, {
             name: "TanZania",
             location: [-6.3690, 34.8888]
+        }, {
+            name: "London",
+            location: [51.52259263382457, -0.12907591917933103]
         }
     ]
 
