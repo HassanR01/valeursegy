@@ -1,9 +1,9 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Pill } from '../models/Fusion-Products'
 import { Socheck } from '../models/Socheck'
 import { Canvas } from '@react-three/fiber'
-import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { Environment, Html, OrbitControls, PerspectiveCamera, useProgress } from '@react-three/drei'
 import HTMLReactParser from 'html-react-parser'
 import { motion } from 'framer-motion'
 import Loading from '../main/Loading'
@@ -26,7 +26,7 @@ export default function ProductPage({ product, lang }) {
     const [endNum, setEndNum] = useState(3)
     const { name, description, model, sections, nameAr, descriptionAr, sectionsAr } = product
     const [threedshow, setThreedShow] = useState(false)
-    
+
 
     useEffect(() => {
         setIsLoading(false)
@@ -35,6 +35,48 @@ export default function ProductPage({ product, lang }) {
     if (isLoading) {
         <Loading />
     } else {
+
+        function Loader() {
+            const { progress } = useProgress()
+            return (
+                <>
+                    <Html
+                        style={{
+                            backgroundColor: 'black',
+                            color: 'white',
+                            fontSize: '1.5rem',
+                            padding: '1rem',
+                            borderRadius: '10px',
+                            width: '300px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            textAlign: 'center'
+                        }} center>
+                        {Math.trunc(progress)}% loaded
+                    </Html>
+                    <Html
+                        style={{
+                            backgroundColor: 'black',
+                            color: 'white',
+                            fontSize: '1.5rem',
+                            borderRadius: '10px',
+                            width: `${(progress / 100) * 300}px`,
+                            height: '5px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            marginTop: '60px',
+                            transitionDuration: '0.5s'
+                        }}
+                        center
+                    >
+
+                    </Html>
+                </>
+            )
+        }
 
         return (
             <>
@@ -64,67 +106,77 @@ export default function ProductPage({ product, lang }) {
                                         </SwiperSlide>
                                     ))}
                                 </>
-                            ): (
-                                    <>
-                                        {sections.map((section, ind) => (
-                                            <SwiperSlide key={ind} className="section max-w-2xl lg:max-w-5xl text-center pb-20 lg:text-start flex flex-col items-center lg:items-start justify-start my-4 p-2">
-                                                <h2 className='text-2xl font-semibold mb-4'>{section.subTitle}</h2>
-                                                <div className="SecArtical text-xl">{HTMLReactParser(section.text)}</div>
-                                            </SwiperSlide>
-                                        ))}
-                                    </>    
-                           )}
+                            ) : (
+                                <>
+                                    {sections.map((section, ind) => (
+                                        <SwiperSlide key={ind} className="section max-w-2xl lg:max-w-5xl text-center pb-20 lg:text-start flex flex-col items-center lg:items-start justify-start my-4 p-2">
+                                            <h2 className='text-2xl font-semibold mb-4'>{section.subTitle}</h2>
+                                            <div className="SecArtical text-xl">{HTMLReactParser(section.text)}</div>
+                                        </SwiperSlide>
+                                    ))}
+                                </>
+                            )}
                         </Swiper>
                     </div>
 
-                    <div className={`showModel ${threedshow ? 'flex fixed lg:sticky z-40 w-full h-screen top-0 left-0 bg-white': 'lg:flex hidden'} lg:w-[500px] cursor-move fixed lg:sticky top-0 items-center justify-center h-[50vh]`}>
+                    <div className={`showModel ${threedshow ? 'flex fixed lg:sticky z-40 w-full h-screen top-0 left-0 bg-white' : 'lg:flex hidden'} lg:w-[500px] cursor-move fixed lg:sticky top-0 items-center justify-center h-[50vh]`}>
                         {model === 'So-Check' && (
                             <>
                                 <Canvas>
-                                    <Environment preset='city' />
-                                    <PerspectiveCamera makeDefault position={[0, 2, 8]} />
-                                    <OrbitControls maxDistance={10}  minDistance={4}  />
-                                    <Socheck />
+                                    <Suspense fallback={<Loader />}>
+                                        <Environment preset='city' />
+                                        <PerspectiveCamera makeDefault position={[0, 2, 8]} />
+                                        <OrbitControls maxDistance={10} minDistance={4} />
+                                        <Socheck />
+                                    </Suspense>
                                 </Canvas>
                             </>
                         )}
                         {model === 'Gniom-Check' && (
                             <>
                                 <Canvas>
-                                    <Environment preset='city' />
-                                    <PerspectiveCamera makeDefault position={[0, 3, 6]} />
-                                    <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
-                                    <Gniom />
+                                    <Suspense fallback={<Loader />}>
+                                        <Environment preset='city' />
+                                        <PerspectiveCamera makeDefault position={[0, 3, 6]} />
+                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <Gniom />
+                                    </Suspense>
                                 </Canvas>
                             </>
                         )}
                         {model === 'Fusion-Products' && (
                             <>
                                 <Canvas>
-                                    <Environment preset='city' />
-                                    <PerspectiveCamera makeDefault position={[0, 5, 7]} />
-                                    <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
-                                    <Pill />
+                                    <Suspense fallback={<Loader />}>
+                                        <Environment preset='city' />
+                                        <PerspectiveCamera makeDefault position={[0, 5, 7]} />
+                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <Pill />
+                                    </Suspense>
                                 </Canvas>
                             </>
                         )}
                         {model === 'Bio-print' && (
                             <>
                                 <Canvas>
-                                    <Environment preset='city' />
-                                    <PerspectiveCamera makeDefault position={[0, 3, 8]} />
-                                    <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
-                                    <BioPrint />
+                                    <Suspense fallback={<Loader />}>
+                                        <Environment preset='city' />
+                                        <PerspectiveCamera makeDefault position={[0, 3, 8]} />
+                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <BioPrint />
+                                    </Suspense>
                                 </Canvas>
                             </>
                         )}
                         {model === 'Milta-Technology' && (
                             <>
                                 <Canvas>
-                                    <Environment preset='city' />
-                                    <PerspectiveCamera makeDefault position={[0, 3, 6]} />
-                                    <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
-                                    <Milta />
+                                    <Suspense fallback={<Loader />}>
+                                        <Environment preset='city' />
+                                        <PerspectiveCamera makeDefault position={[0, 3, 6]} />
+                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <Milta />
+                                    </Suspense>
                                 </Canvas>
                             </>
                         )}

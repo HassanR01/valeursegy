@@ -63,21 +63,21 @@ export default function Footer() {
                     <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/news'}>News</TransitionLink></li>
                     <li><TransitionLink className={`text-2xl ml-3 text-start lg:text-lg font-medium m-1 text-stone-300 duration-700 hover:text-mainColor flex items-center justify-center`} href={'/blogs'}>Blogs</TransitionLink></li>
                 </ul>
+                <h4 className='text-2xl font-bold text-mainColor my-4'>Follow Us</h4>
+                <div className="followUs w-full flex flex-row items-center justify-start">
+                    <div className="links ml-0 flex justify-around items-center flex-row">
+                        <Link className='mx-3 hover:scale-125 duration-500' href={"https://www.facebook.com/valeurs.eg"} target='_blank'><Image src={'/facebookIcon.png'} width={30} height={30} alt='Facebook Icon' /></Link>
+                        <Link className='mx-3 hover:scale-125 duration-500' href={"https://www.youtube.com/@ValeursEgypt"} target='_blank'><Image src={'/youtube.png'} width={30} height={30} alt='Tiktok Icon' /></Link>
+                        <Link className='mx-3 hover:scale-125 duration-500' href={"https://www.instagram.com/valeurs.egypt"} target='_blank'><Image src={'/instagram.png'} width={30} height={30} alt='instagram Icon' /></Link>
+                        <Link className='mx-3 hover:scale-125 duration-500' href={"http://linkedin.com/company/valeursegypt"} target='_blank'><Image src={'/linkedin.png'} width={30} height={30} alt='linkedin Icon' /></Link>
+                    </div>
+                </div>
             </div>
             <div className="links flex my-8 flex-col items-center text-center lg:text-start lg:items-start justify-center z-10">
                 <h2 className='text-xl font-bold text-mainColor mb-4'>Subscribe for our latest news and updates</h2>
                 <div className="input lg:min-w-[450px]">
                     <input type="email" name="email" id="email" placeholder='Enter Your Email' value={email} onChange={(e) => setemail(e.target.value)} />
                     <div onClick={() => SendContact()} className=" w-[300px] text-whiteColor cursor-pointer mt-3 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400 bg-mainColor">Subscribe</div>
-                </div>
-                <div className="followUs w-full my-8 flex flex-row items-center justify-start">
-                    <h4 className='text-mainColor text-xl font-medium'>Follow Us</h4>
-                    <div className="links ml-4 flex justify-around items-center flex-row">
-                        <Link className='mx-3' href={"https://www.facebook.com/valeurs.eg"} target='_blank'><Image src={'/facebookIcon.png'} width={30} height={30} alt='Facebook Icon' /></Link>
-                        <Link className='mx-3' href={"https://www.youtube.com/@ValeursEgypt"} target='_blank'><Image src={'/youtube.png'} width={30} height={30} alt='Tiktok Icon' /></Link>
-                        <Link className='mx-3' href={"https://www.instagram.com/valeurs.egypt"} target='_blank'><Image src={'/instagram.png'} width={30} height={30} alt='instagram Icon' /></Link>
-                        <Link className='mx-3' href={"http://linkedin.com/company/valeursegypt"} target='_blank'><Image src={'/linkedin.png'} width={30} height={30} alt='linkedin Icon' /></Link>
-                    </div>
                 </div>
             </div>
 

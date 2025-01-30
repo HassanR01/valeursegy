@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 import OurCompany from '../../../public/bgOurCompany.jpg'
 import React from 'react'
 
-export default function TitleSection({title, description , lang}) {
+export default function TitleSection({title, description, image , lang}) {
 
   return (
       <>
           <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} id='ouroverview' className="section w-[95%] rounded-tr-2xl rounded-bl-2xl h-[50vh] my-[100px] relative px-4 flex flex-col items-center justify-center overflow-hidden" style={{
-              backgroundImage: `url(${OurCompany.src})`,
+              backgroundImage: `${image ? `url(${image.src})` :`{url(${OurCompany.src})}`}`,
               backgroundPosition: "start",
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat'

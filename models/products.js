@@ -6,6 +6,7 @@ const productSchema = new Schema({
     description: String,
     descriptionAr: String,
     model: String,
+    image: String,
     sections: [], // subTitle , text
     sectionsAr: [],
 })
