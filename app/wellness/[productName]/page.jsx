@@ -50,7 +50,7 @@ export default async function Page({ params }) {
     return (
         <>
             <Header translate={`/ar/wellness/${productName}`} />
-            <TitleSection title={`${product.name}`} description={product.description} />
+            <TitleSection image={product.image} title={`${product.name}`} description={product.description} />
             <section className='flex flex-col items-center justify-start w-full'>
                 <ProductPage product={product} />
             </section>

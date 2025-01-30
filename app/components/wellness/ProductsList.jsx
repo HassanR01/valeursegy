@@ -9,18 +9,25 @@ import Loading from '../main/Loading'
 import { BioPrint } from '../models/bioPrint'
 import { Milta } from '../models/Milta'
 import { Gniom } from '../models/Gniom'
+import { useDataContext } from '../Context/DataContext'
+import Image from 'next/image'
 
 export default function ProductsList({ lang }) {
     const [isLoading, setIsLoading] = useState(true)
+
+    const { products } = useDataContext()
 
     useEffect(() => {
         setIsLoading(false)
     }, [])
 
-    if (isLoading) {
+    
+    if (!products) {
         return <Loading />
     } else {
 
+        console.log(products)
+        
         function Loader() {
             const { progress } = useProgress()
             return (
@@ -66,7 +73,7 @@ export default function ProductsList({ lang }) {
         return (
             <>
                 <div className="list flex flex-wrap items-center justify-center mb-20 w-full">
-                    <TransitionLink href={`${lang}/wellness/So-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                    <TransitionLink href={`${lang}/wellness/${products[0].name}`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
                             <Suspense fallback={<Loader />}>
                                 <PerspectiveCamera makeDefault position={[0, 3, 3]} />
@@ -79,7 +86,7 @@ export default function ProductsList({ lang }) {
                             <h2 className='text-2xl text-whiteColor font-bold'>So Check</h2>
                         </div>
                     </TransitionLink>
-                    <TransitionLink href={`${lang}/wellness/Milta-Technology`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                    <TransitionLink href={`${lang}/wellness/${products[1].name}`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
                             <Suspense fallback={<Loader />}>
                                 <PerspectiveCamera makeDefault position={[4, 0, 4]} />
@@ -92,7 +99,7 @@ export default function ProductsList({ lang }) {
                             <h2 className='text-2xl text-whiteColor font-bold'>Milta Technology</h2>
                         </div>
                     </TransitionLink>
-                    <TransitionLink href={`${lang}/wellness/Fusion-Products`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                    <TransitionLink href={`${lang}/wellness/${products[3].name}`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
                             <Suspense fallback={<Loader />}>
                                 <PerspectiveCamera makeDefault position={[0, 7, 10]} />
@@ -105,7 +112,7 @@ export default function ProductsList({ lang }) {
                             <h2 className='text-2xl text-whiteColor font-bold'>Fusion Products</h2>
                         </div>
                     </TransitionLink>
-                    <TransitionLink href={`${lang}/wellness/Bio-print`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                    <TransitionLink href={`${lang}/wellness/${products[2].name}`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
                             <Suspense fallback={<Loader />}>
                                 <PerspectiveCamera makeDefault position={[0, 2, 8]} />
@@ -118,7 +125,7 @@ export default function ProductsList({ lang }) {
                             <h2 className='text-2xl text-whiteColor font-bold'>Bio Print</h2>
                         </div>
                     </TransitionLink>
-                    <TransitionLink href={`${lang}/wellness/Gniom-Check`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                    <TransitionLink href={`${lang}/wellness/${products[4].name}`} className="product hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
                         <Canvas>
                             <Suspense fallback={<Loader />}>
                                 <PerspectiveCamera makeDefault position={[4, 2, 4]} />
@@ -131,6 +138,16 @@ export default function ProductsList({ lang }) {
                             <h2 className='text-2xl text-whiteColor font-bold'>Gniom Check</h2>
                         </div>
                     </TransitionLink>
+                    {products.map((product, index) => (
+                        <TransitionLink href={`${lang}/wellness/${product.name}`} key={index} className="product overflow-hidden hover:shadow-xl m-2 duration-700 rounded-tr-xl rounded-bl-xl min-w-[300px] w-[45%] h-[300px] border border-whiteColor flex flex-col items-center justify-start">
+                            <div className='w-full h-[250px]'>
+                                <Image src={product.image} width={1000} height={400} className='w-full h-full' />
+                            </div>
+                            <div className="title p-2">
+                                <h2 className='text-2xl text-whiteColor font-bold'>{product.name}</h2>
+                            </div>
+                        </TransitionLink>
+                    )).slice(5, products.length)}
                 </div>
             </>
         )

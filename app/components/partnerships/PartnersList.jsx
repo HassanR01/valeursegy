@@ -7,10 +7,9 @@ import Link from 'next/link'
 import { useDataContext } from '../Context/DataContext'
 
 export default function PartnersList({ lang }) {
-    const { partenerShips } = useDataContext()
-
+    const { partenerShips, products } = useDataContext()
+    
     if (partenerShips) {
-
         const filterPartner = (type) => {
             const wantedpartners = partenerShips.filter(partner => {
                 const matchedtype = partner.type === type

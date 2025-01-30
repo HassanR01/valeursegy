@@ -127,16 +127,16 @@ export default function DashboardDataGeting() {
                     </div>
                     <nav>
                         <ul>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Analysis')}>Analysis</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Products')}>Products</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Blogs')}>Blogs</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('News')}>News</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Social-Impact')}>Social Impact</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Partnerships')}>Partnerships</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Meetings')}>Meetings</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('HCPs')}>HCPs</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Careers')}>Careers</li>
-                            <li className='w-32 my-2 cursor-pointer text-whiteColor rounded-xl text-center p-2 bg-mainColor font-bold' onClick={() => setSection('Users')}>Users</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Analysis" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Analysis')}>Analysis</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Products" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Products')}>Products</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Blogs" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Blogs')}>Blogs</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "News" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('News')}>News</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Social-Impact" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Social-Impact')}>Social Impact</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Partnerships" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Partnerships')}>Partnerships</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Meetings" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Meetings')}>Meetings</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "HCPs" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('HCPs')}>HCPs</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Careers" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Careers')}>Careers</li>
+                            <li className={`w-32 my-2 cursor-pointer ${section === "Users" ? "bg-whiteColor text-mainColor":"text-whiteColor bg-mainColor"} rounded-xl text-center p-2 font-bold`} onClick={() => setSection('Users')}>Users</li>
                         </ul>
                     </nav>
                     <div className="logout">
