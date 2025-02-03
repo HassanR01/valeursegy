@@ -106,3 +106,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
+
+.swiper-button-prev, .swiper-button-next::after {
+  color: #1d1a73 !important;
+}

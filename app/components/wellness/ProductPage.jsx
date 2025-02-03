@@ -16,9 +16,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation'
 
 // import required modules
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 
 
 export default function ProductPage({ product, lang }) {
@@ -81,26 +82,27 @@ export default function ProductPage({ product, lang }) {
         return (
             <>
                 <div className={`section relative flex flex-col pb-20 lg:flex-row my-5 items-center w-full justify-start lg:justify-around`} dir={lang === "ar" ? 'rtl' : 'ltr'} >
-                    <div className="articale max-w-2xl w-full flex items-center lg:items-start justify-center flex-col">
+                    <div className="articale max-w-3xl w-full flex items-center lg:items-start justify-center flex-col">
                         <Swiper
                             spaceBetween={30}
                             centeredSlides={true}
                             autoHeight={true}
                             autoplay={{
-                                delay: 10000,
+                                delay: 15000,
                                 disableOnInteraction: false,
                             }}
                             pagination={{
                                 clickable: true,
                             }}
-                            modules={[Pagination, Autoplay]}
+                            navigation={true} // Enable navigation buttons
+                            modules={[Pagination, Autoplay, Navigation]}
                             className="mySwiper p-4 text-center relative w-full"
                         >
 
                             {lang === 'ar' ? (
                                 <>
                                     {sectionsAr.map((section, ind) => (
-                                        <SwiperSlide key={ind} className="section max-w-2xl lg:max-w-5xl text-center pb-20 lg:text-start flex flex-col items-center lg:items-start justify-start my-4 p-2">
+                                        <SwiperSlide key={ind} className="section max-w-2xl lg:max-w-5xl text-center px-16 pb-20 lg:text-start flex flex-col items-center lg:items-start justify-start my-4 p-2">
                                             <h2 className='text-2xl font-semibold mb-4'>{section.subTitleAr}</h2>
                                             <div className="SecArtical text-xl">{HTMLReactParser(section.textAr)}</div>
                                         </SwiperSlide>
@@ -109,7 +111,7 @@ export default function ProductPage({ product, lang }) {
                             ) : (
                                 <>
                                     {sections.map((section, ind) => (
-                                        <SwiperSlide key={ind} className="section max-w-2xl lg:max-w-5xl text-center pb-20 lg:text-start flex flex-col items-center lg:items-start justify-start my-4 p-2">
+                                        <SwiperSlide key={ind} className="section max-w-2xl lg:max-w-5xl text-center px-16 pb-20 lg:text-start flex flex-col items-center lg:items-start justify-start my-4 p-2">
                                             <h2 className='text-2xl font-semibold mb-4'>{section.subTitle}</h2>
                                             <div className="SecArtical text-xl">{HTMLReactParser(section.text)}</div>
                                         </SwiperSlide>

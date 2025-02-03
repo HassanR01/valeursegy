@@ -279,7 +279,7 @@ export default function ProductsSection({ products }) {
               </div>
             </div>
 
-            <div className="sectionsAr w-full px-2">
+            <div className="sectionsAr w-full px-2" dir='rtl'>
               {sectionsAr.map((section, ind) => (
                 <div className="section text-whiteColor my-8 p-2 w-full relative border-b-2" key={ind}>
                   <h2 className='text-xl font-semibold text-whiteColor'>{section.subTitleAr}</h2>
@@ -298,13 +298,13 @@ export default function ProductsSection({ products }) {
               ))}
             </div>
 
-            <div id='editAr' className="sectionAddAr my-4 w-full px-2">
+            <div id='editAr' className="sectionAddAr my-4 w-full px-2" dir='rtl'>
               <div className="subtitle my-4">
-                <label htmlFor="subTitle">Sub Arabic Title for Section: </label>
+                <label htmlFor="subTitle">العنوان الفرعي للموضوع: </label>
                 <input type="text" name="subtitle" id="subTitle" placeholder='Arabic subTitle for Section in Product' value={subTitleAr} onChange={(e) => setSubTitleAr(e.target.value)} />
               </div>
               <JoditEditor ref={editor} value={textAr} onChange={e => setTextAr(e)} />
-              <div className="btnForm cursor-pointer" onClick={() => updateSectionsAr()}>{editSectionAr ? "Edit" :"Add"} Section</div>
+              <div className="btnForm cursor-pointer" onClick={() => updateSectionsAr()}>{editSectionAr ? "تعديل" :"إضافة"} الموضوع</div>
             </div>
 
 
