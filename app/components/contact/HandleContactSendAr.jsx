@@ -76,13 +76,13 @@ export default function HandleContactSendAr() {
                 <div className="contactInfo flex flex-col items-start justify-center mt-4 lg:mx-10">
                     <h2 className='text-2xl mb-4 font-bold text-whiteColor'>معلومات التواصل</h2>
                     <div className="info mb-4">
-                        <h4 className='text-lg font-medium'>الهاتف: <span className='font-light'>01234567890</span></h4>
+                        <h4 className='text-lg font-medium'>الهاتف: <span className='font-semiBold'>٢٠١٠٠٤٢٩١٩٤٥+</span></h4>
                         <h4 className='text-lg font-medium'>البريد الالكتروني: <span className='font-light'>info@valeursegy.com</span></h4>
                         <h4 className='text-lg font-medium'>العنوان:</h4>
-                        <p className='mr-4'><span className='text-lg font-semibold'>مصر:</span> Cairo - Fifth Settlement</p>
-                        <p className='mr-4'><span className='text-lg font-semibold'>فرنسا:</span> Paris</p>
-                        <p className='mr-4'><span className='text-lg font-semibold'>الإمارات:</span> Dubai</p>
-                        <p className='mr-4'><span className='text-lg font-semibold'>الولايات المتحدة الامريكية:</span> New York</p>
+                        <p className='mr-4'><span className='text-lg font-semibold'>مصر:</span> فيلا ١٧٤، الياسمين ١، التجمع الخامس، القاهرة</p>
+                        <p className='mr-4'><span className='text-lg font-semibold'>الإمارات:</span> مكتب رقم ٢١، برج أرينكو، مدينة دبي للإعلام</p>
+                        <p className='mr-4'><span className='text-lg font-semibold'>فرنسا:</span> <span dir='ltr'>1 TER rue de la Garrigue - ZA du Bosc 34130 Mudaison</span></p>
+                        <p className='mr-4 max-w-sm'><span className='text-lg font-semibold'>الولايات المتحدة الامريكية:</span> <span dir='ltr'>347 Fifth Avenue Suite 1402-598 New York, NY 10016</span></p>
                     </div>
                     <h2 className='text-2xl mb-4 font-bold text-whiteColor'>صفحات التواصل الاجتماعي</h2>
                     <div className="links mb-4 w-full flex justify-around items-center flex-row">

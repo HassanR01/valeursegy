@@ -61,11 +61,9 @@ export default function Page() {
       </section>
 
       <section id='text' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
-        <h2 className='text-xl lg:text-3xl font-bold'>نحن في شركة فالورز مهتمون بتزويد المجتمع بأحدث الأجهزة الطبية التي تشمل العمل بالذكاء الإصطناعي و التي يمكنها خدمة الصحة العامة للمجتمع ، حيث نكون سفراء لمجال الصحة العامة في الشرق الأوسط</h2>
-        <p className='text-xl font-semibold lg:text-2xl mb-4'>مع إلتزامنا لتحسين جودة الحياة في المجتمع</p>
-        <p className='text-xl max-w-6xl'>نحن نستخدم أحدث تقنيات الذكاء الاصطناعي لتقديم حلول مبتكرة تمكّن المتخصصين في الرعاية الصحية للقيام بدورهم علي أكمل وجه وتحسن النتائج الصحية للمرضى و المستخدمين.تم تصميم منتجاتنا وخدماتنا لدعم مستقبل صحي، مع ضمان أن يتمتع كل فرد بأفضل مستويات الرعاية الطبية والعافية.</p>
-        <p className='text-xl max-w-6xl'>تقف فالورز في مقدمة الشركات التي تسعي لتحويل مفهوم العافية من خلال التقنيات الطبية المبتكرة.</p>
-        <p className='text-xl max-w-6xl'>كسفراء للصحة العامة، نحن ملتزمون بتحسين جودة الحياة من خلال تقديم حلول متقدمة مدعومة بأحدث تقنيات الذكاء الاصطناعي.</p>
+        <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>مهمتنا</h2>
+        <h4 className='text-xl lg:text-3xl font-semibold mb-4'>في ڤالورز، نحن ملتزمون بإحداث ثورة في مجال الرعاية الصحية في الشرق الأوسط والعالم من خلال دمج أحدث تقنيات الذكاء الاصطناعي الطبي وحلول الرعاية الصحية المتقدمة.</h4>
+        <p className='text-xl max-w-6xl'>من خلال تقنياتنا المتقدمة، بما في ذلك بروتوكولات العلاج الذاتي وتطبيقات الخلايا الجذعية وتحضير الأدوية المركبة، نسعى لتمكين مقدمي الرعاية الصحية وتحسين نتائج المرضى. مسترشدين بالابتكار والتميز والتعاطف، حيث نعمل على جعل الرعاية الصحية ذات المستوى العالمي متاحة وتحمل تأثيرًا فعالاً.</p>
       </section>
 
       <section
@@ -77,13 +75,14 @@ export default function Page() {
         }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-70 filter blur-sm"></div>
-        <h2 className='lg:text-6xl font-mainFont text-3xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6 px-2'>سفراء الصحة العامة</h2>
+        <h2 className='lg:text-6xl font-mainFont text-3xl w-full text-whiteColor absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-black mb-6 px-2'>كن سفيراً للرعاية الصحية</h2>
 
       </section>
 
       <section id='vision' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
         <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>رؤيتنا</h2>
-        <p className='text-xl font-semibold lg:text-3xl mb-4'>هي أن نكون في مقدمة الشركات التي توفر حلول الرعاية الصحية الحديثة التي تمكّن الأفراد والمتخصصين في الرعاية الصحية على حد سواء.</p>
+        <h4 className='text-xl lg:text-3xl font-semibold mb-4'>أن نكون المزود العالمي الرائد لحلول الذكاء الاصطناعي الطبي و الرعاية الصحية، واضعين معايير جديدة للابتكار وسهولة الاسفادة.</h4>
+        <p className='text-xl max-w-6xl'>من أحدث التقنيات وتعزيز الشراكات في مصر، الإمارات، الأردن، اليونان، والولايات المتحدة الأمريكية، حيث نسعى إلى إعادة تعريف مستقبل الصحة والعافية في الشرق الأوسط وترك بصمة مستدامة على معايير الرعاية الصحية العالمية.</p>
       </section>
       
 

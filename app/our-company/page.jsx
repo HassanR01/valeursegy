@@ -62,8 +62,7 @@ export default function Page() {
 
       <section id='text' className="section text-center w-full relative p-4 max-w-5xl flex flex-col items-center justify-center my-[80px]">
         <h2 className='text-3xl lg:text-5xl mb-10 font-bold'>Our Mission</h2>
-        <h2 className='text-xl lg:text-3xl font-semibold mb-4'>At Valeurs, we are committed to revolutionizing healthcare in the Middle East and beyond by integrating cutting-edge medical AI and wellness solutions</h2>
-        {/* <p className='text-xl font-semibold lg:text-2xl mb-4'>Leveraging cutting-edge AI technologies</p> */}
+        <h4 className='text-xl lg:text-3xl font-semibold mb-4'>At Valeurs, we are committed to revolutionizing healthcare in the Middle East and beyond by integrating cutting-edge medical AI and wellness solutions</h4>
         <p className='text-xl max-w-6xl'>Through our advanced technologies, including autologous treatment protocols, stem cell applications, and pharmaceutical compounding, we aim to empower healthcare providers and improve patient outcomes. Guided by innovation, excellence, and compassion, we strive to make world-class healthcare accessible and transformative.</p>
       </section>
 

@@ -70,10 +70,10 @@ export default function FooterAr() {
                     <input type="email" name="email" id="email" placeholder='Enter Your Email' value={email} onChange={(e) => setemail(e.target.value)} />
                     <div onClick={() => SendContact()} className=" w-[300px] text-whiteColor cursor-pointer mt-3 text-lg text-center font-medium p-2 rounded-tl-xl rounded-br-xl duration-700 hover:bg-green-400 bg-mainColor">اشترك</div>
                 </div>
-                <div className="followUs w-full my-8 flex flex-row items-center justify-start">
-                    <h4 className='text-mainColor text-xl font-medium'>تابعنا علي</h4>
-                    <div className="links mr-4 flex justify-around items-center flex-row">
-                        <Link className='mx-3' href={"https://www.facebook.com/valeurs.eg"} target='_blank'><Image src={'/facebookIcon.png'} width={30} height={30} alt='Facebook Icon' /></Link>
+                <div className="ffollowUs w-full flex flex-col items-start justify-start">
+                    <h4 className='text-2xl font-bold text-mainColor my-4'>تابعنا علي</h4>
+                    <div className="links mr-0 flex justify-around items-center flex-row">
+                        <Link className='ml-3' href={"https://www.facebook.com/valeurs.eg"} target='_blank'><Image src={'/facebookIcon.png'} width={30} height={30} alt='Facebook Icon' /></Link>
                         <Link className='mx-3' href={"https://www.youtube.com/@ValeursEgypt"} target='_blank'><Image src={'/youtube.png'} width={30} height={30} alt='Tiktok Icon' /></Link>
                         <Link className='mx-3' href={"https://www.instagram.com/valeurs.egypt"} target='_blank'><Image src={'/instagram.png'} width={30} height={30} alt='instagram Icon' /></Link>
                         <Link className='mx-3' href={"http://linkedin.com/company/valeursegypt"} target='_blank'><Image src={'/linkedin.png'} width={30} height={30} alt='linkedin Icon' /></Link>
