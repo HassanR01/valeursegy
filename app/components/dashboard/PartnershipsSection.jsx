@@ -152,6 +152,7 @@ export default function PartnershipsSection({ partners }) {
                   <select name="type" id="type" value={type} onChange={(e) => settype(e.target.value)}>
                     <option value="">Company or Clinic</option>
                     <option value="Company">Company</option>
+                    <option value="Hospital">Hospital</option>
                     <option value="Clinic">Clinic</option>
                   </select>
                 </div>
