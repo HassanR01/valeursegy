@@ -1,0 +1,335 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "babylon.js glTF exporter for 3dsmax 2022 v20250127.3"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "children": [
+                1,
+                2,
+                3
+            ],
+            "translation": [
+                0.628922,
+                14.1440182,
+                0.742653847
+            ],
+            "name": "Group001"
+        },
+        {
+            "mesh": 0,
+            "translation": [
+                -4.76837158E-07,
+                -3.26749229,
+                -5.24520874E-06
+            ],
+            "rotation": [
+                0.117702328,
+                -0.697106838,
+                0.6972887,
+                0.11822331
+            ],
+            "scale": [
+                0.9611927,
+                1.00966465,
+                1.01934314
+            ],
+            "name": "Object005"
+        },
+        {
+            "mesh": 1,
+            "translation": [
+                0.105121136,
+                9.828918,
+                0.02190733
+            ],
+            "scale": [
+                0.466368675,
+                0.212151244,
+                0.4615759
+            ],
+            "name": "Cylinder002"
+        },
+        {
+            "mesh": 2,
+            "translation": [
+                5.867854,
+                -3.097929,
+                -2.21380615
+            ],
+            "rotation": [
+                0.696384549,
+                0.122672841,
+                -0.122672848,
+                0.69638443
+            ],
+            "scale": [
+                0.9466152,
+                1.0,
+                1.03937125
+            ],
+            "name": "Line002"
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 1,
+                        "NORMAL": 2,
+                        "TEXCOORD_0": 3
+                    },
+                    "indices": 0,
+                    "material": 0
+                }
+            ],
+            "name": "Object005"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 5,
+                        "NORMAL": 6,
+                        "TEXCOORD_0": 7
+                    },
+                    "indices": 4,
+                    "material": 1
+                }
+            ],
+            "name": "Cylinder002"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 9,
+                        "NORMAL": 10
+                    },
+                    "indices": 8,
+                    "material": 2
+                }
+            ],
+            "name": "Line002"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5123,
+            "count": 3456,
+            "type": "SCALAR",
+            "name": "accessorIndices"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 644,
+            "max": [
+                7.945443,
+                7.945441,
+                7.362529
+            ],
+            "min": [
+                -7.94544029,
+                -7.94544268,
+                -7.26970863
+            ],
+            "type": "VEC3",
+            "name": "accessorPositions"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 7728,
+            "componentType": 5126,
+            "count": 644,
+            "type": "VEC3",
+            "name": "accessorNormals"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 644,
+            "type": "VEC2",
+            "name": "accessorUVs"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 6912,
+            "componentType": 5123,
+            "count": 9372,
+            "type": "SCALAR",
+            "name": "accessorIndices"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 15456,
+            "componentType": 5126,
+            "count": 1658,
+            "max": [
+                14.0788307,
+                23.2231922,
+                14.018774
+            ],
+            "min": [
+                -14.0788307,
+                0.0,
+                -14.0187731
+            ],
+            "type": "VEC3",
+            "name": "accessorPositions"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 35352,
+            "componentType": 5126,
+            "count": 1658,
+            "type": "VEC3",
+            "name": "accessorNormals"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 5152,
+            "componentType": 5126,
+            "count": 1658,
+            "type": "VEC2",
+            "name": "accessorUVs"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 25656,
+            "componentType": 5123,
+            "count": 110592,
+            "type": "SCALAR",
+            "name": "accessorIndices"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 55248,
+            "componentType": 5126,
+            "count": 18944,
+            "max": [
+                1.28217387,
+                7.95127249,
+                11.21622
+            ],
+            "min": [
+                -14.531641,
+                -7.862543,
+                -13.6394558
+            ],
+            "type": "VEC3",
+            "name": "accessorPositions"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 282576,
+            "componentType": 5126,
+            "count": 18944,
+            "type": "VEC3",
+            "name": "accessorNormals"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 246840,
+            "name": "bufferViewScalar"
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 246840,
+            "byteLength": 509904,
+            "byteStride": 12,
+            "name": "bufferViewFloatVec3"
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 756744,
+            "byteLength": 18416,
+            "byteStride": 8,
+            "name": "bufferViewFloatVec2"
+        }
+    ],
+    "buffers": [
+        {
+            "uri": "fusion.bin",
+            "byteLength": 775160
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.0
+            },
+            "doubleSided": true,
+            "name": "Material #63",
+            "extras": {
+                "babylonSeparateCullingPass": false
+            }
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.07481382,
+                    0.3222749,
+                    0.07481382,
+                    1.0
+                ],
+                "metallicFactor": 0.23,
+                "roughnessFactor": 0.87
+            },
+            "doubleSided": true,
+            "name": "11 - Default",
+            "extras": {
+                "babylonSeparateCullingPass": false
+            }
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.309803933,
+                    0.494117647,
+                    0.380392164,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.3186438
+            },
+            "doubleSided": true,
+            "name": "21 - Default"
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0,
+            "name": "fusion.jpg"
+        }
+    ],
+    "images": [
+        {
+            "uri": "fusion.jpg"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ]
+}

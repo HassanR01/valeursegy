@@ -249,8 +249,10 @@ export default function ProductsSection({ products }) {
                   <option value="">Choose 3D Model</option>
                   <option value="So-Check">So-Check</option>
                   <option value="Gniom-Check">Gniom-Check</option>
+                  <option value="Fusion-DNA">Fusion-DNA</option>
                   <option value="Milta-Technology">Milta-Technology</option>
-                  <option value="Fusion-Products">Fusion-Products</option>
+                  <option value="Fusion-Pills">Fusion-Pills</option>
+                  <option value="Fusion-Vials">Fusion-Vials</option>
                   <option value="Bio-print">Bio-print</option>
                 </select>
               </div>

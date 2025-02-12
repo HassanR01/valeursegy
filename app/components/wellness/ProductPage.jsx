@@ -20,6 +20,8 @@ import 'swiper/css/navigation'
 
 // import required modules
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import { Vials } from '../models/Vials'
+import { DNA } from '../models/DNA'
 
 
 export default function ProductPage({ product, lang }) {
@@ -146,7 +148,7 @@ export default function ProductPage({ product, lang }) {
                                 </Canvas>
                             </>
                         )}
-                        {model === 'Fusion-Products' && (
+                        {model === 'Fusion-Pills' && (
                             <>
                                 <Canvas>
                                     <Suspense fallback={<Loader />}>
@@ -158,6 +160,19 @@ export default function ProductPage({ product, lang }) {
                                 </Canvas>
                             </>
                         )}
+                        {model === 'Fusion-Vials' && (
+                            <>
+                                <Canvas>
+                                    <Suspense fallback={<Loader />}>
+                                        <Environment preset='city' />
+                                        <PerspectiveCamera makeDefault position={[30, 20, 10]} />
+                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <Vials />
+                                    </Suspense>
+                                </Canvas>
+                            </>
+                        )
+                        }
                         {model === 'Bio-print' && (
                             <>
                                 <Canvas>
@@ -166,6 +181,17 @@ export default function ProductPage({ product, lang }) {
                                         <PerspectiveCamera makeDefault position={[0, 3, 8]} />
                                         <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
                                         <BioPrint />
+                                    </Suspense>
+                                </Canvas>
+                            </>
+                        )}
+                        {model === 'Fusion-DNA' && (
+                            <>
+                                <Canvas>
+                                    <Suspense fallback={<Loader />}>
+                                        <PerspectiveCamera makeDefault position={[1, 2, 0]} />
+                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <DNA />
                                     </Suspense>
                                 </Canvas>
                             </>

@@ -1,21 +1,16 @@
 'use client'
-import { Environment, Html, OrbitControls, PerspectiveCamera, useHelper, useProgress } from "@react-three/drei";
+import { Html, OrbitControls, PerspectiveCamera, useProgress } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Env } from "./components/models/Env";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Loading from "./components/main/Loading";
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import bgHome from '../public/bgHome.jpg'
-import Image from "next/image";
 import { motion } from "framer-motion";
-import AnimatedNumber from "./components/main/AnimateNumber";
 import Header from "./components/main/Header";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
-  const sections = ['#home', '#plane']
 
   useEffect(() => {
     setIsLoading(false)
