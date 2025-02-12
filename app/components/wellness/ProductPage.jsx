@@ -165,8 +165,8 @@ export default function ProductPage({ product, lang }) {
                                 <Canvas>
                                     <Suspense fallback={<Loader />}>
                                         <Environment preset='city' />
-                                        <PerspectiveCamera makeDefault position={[30, 20, 10]} />
-                                        <OrbitControls maxDistance={10} enableZoom={false} minDistance={1} />
+                                        <PerspectiveCamera makeDefault position={[50, 20, 10]} />
+                                        <OrbitControls enableZoom={false} minDistance={1} />
                                         <Vials />
                                     </Suspense>
                                 </Canvas>

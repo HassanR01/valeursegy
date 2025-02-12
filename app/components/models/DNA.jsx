@@ -20,7 +20,7 @@ export function DNA(props) {
             <ambientLight intensity={1.5} />
             <pointLight intensity={4} position={[1, 1, 1]} />
 
-            <group scale={[20, 20, 20]}>
+            <group scale={[25, 25, 25]}>
                 <mesh
                     castShadow
                     receiveShadow
