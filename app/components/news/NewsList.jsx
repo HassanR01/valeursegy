@@ -18,8 +18,8 @@ export default function NewsList({lang}) {
                             <Image className='w-full h-full' src={now.images[0]} width={2000} height={2000} alt={lang === 'ar' ? now.titleAr : now.title} />
                             <div className="details absolute w-full h-full top-0 left-0 bg-whiteColor bg-opacity-70 flex items-center justify-center flex-col p-4">
                                 <h1 className='lg:text-4xl text-3xl font-bold text-mainColor'>{lang === 'ar' ? now.titleAr : now.title}</h1>
-                                <span className='text-mainColor text-lg'>{lang === 'ar' ? `تاريخ الخبر: ${new Date(now.date).toLocaleDateString()}` : `News Date: ${new Date(now.date).toLocaleDateString()}`}</span>
-                                <p className='text-xl text-mainColor font-semibold'>{lang === 'ar' ? now.descriptionAr : now.description}</p>
+                                <p className='text-xl text-mainColor my-2 font-semibold'>{lang === 'ar' ? now.descriptionAr : now.description}</p>
+                                <span className='text-mainColor text-left w-full text-lg'>{lang === 'ar' ? `تاريخ الخبر: ${new Date(now.date).toLocaleDateString()}` : `News Date: ${new Date(now.date).toLocaleDateString()}`}</span>
                             </div>
                         </TransitionLink>
                     ))}

@@ -24,7 +24,7 @@ export default function page() {
     <>
       <HeaderAr translate={'/blogs'} />
       <TitleSection title={`مقالات عن الصحة العامة`} />
-      <section className='min-h-screen'>
+      <section className='min-h-screen w-full'>
         <BlogsList lang={'ar'} />
       </section>
       <FooterAr />

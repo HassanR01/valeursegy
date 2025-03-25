@@ -46,7 +46,7 @@ export default function MenuBar({ lang }) {
                                 <li className='relative group text-whiteColor mx-4 cursor-pointer text-lg'>
                                     <TransitionLink className={`py-1 px-4 flex items-center font-bold justify-center`} href={'/ar/wellness'}>حلولنا للصحة العامة</TransitionLink>
                                     {/* Dropdown Menu */}
-                                    <div className="absolute w-full overflow-hidden h-0 flex items-center justify-center px-1 group-hover:h-[250px] bg-white text-black  rounded-xl mt-1 shadow-lg duration-500">
+                                    <div className="absolute w-full overflow-hidden h-0 flex items-center justify-center px-1 group-hover:h-[270px] bg-white text-black  rounded-xl mt-1 shadow-lg duration-500">
                                         <ul className='w-full h-full flex flex-col items-center justify-around'>
                                             <li className='w-full'>
                                                 <TransitionLink href={`/ar/wellness/${products[0].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center py-2">
@@ -71,6 +71,11 @@ export default function MenuBar({ lang }) {
                                             <li className='w-full'>
                                                 <TransitionLink href={`/ar/wellness/${products[2].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center px-4 py-2">
                                                     الطباعة الحيوية
+                                                </TransitionLink>
+                                            </li>
+                                            <li className='w-full'>
+                                                <TransitionLink href={`/ar/wellness/${products[5].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center px-4 py-2">
+                                                    دي ان ايه لايف
                                                 </TransitionLink>
                                             </li>
                                         </ul>
@@ -116,9 +121,9 @@ export default function MenuBar({ lang }) {
                                     </div>
                                 </li>
                                 <li className='relative group text-whiteColor mx-4 cursor-pointer text-lg'>
-                                    <TransitionLink className={`py-1 px-4 flex items-center font-bold justify-center`} href={'/wellness'}>Our Wellness Soloutions</TransitionLink>
+                                    <TransitionLink className={`py-1 px-4 flex items-center font-bold justify-center`} href={'/wellness'}>Our Wellness Solutions</TransitionLink>
                                     {/* Dropdown Menu */}
-                                    <div className="absolute w-full overflow-hidden h-0 flex items-center justify-center px-1 group-hover:h-[250px] bg-white text-black  rounded-xl mt-1 shadow-lg duration-500">
+                                    <div className="absolute w-full overflow-hidden h-0 flex items-center justify-center px-1 group-hover:h-[270px] bg-white text-black  rounded-xl mt-1 shadow-lg duration-500">
                                         <ul className='w-full h-full flex flex-col items-center justify-around'>
                                             <li className='w-full'>
                                                 <TransitionLink href={`/wellness/${products[0].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center py-2">
@@ -137,12 +142,17 @@ export default function MenuBar({ lang }) {
                                             </li>
                                             <li className='w-full'>
                                                 <TransitionLink href={`/wellness/${products[3].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center px-4 py-2">
-                                                    Fusion Products
+                                                    Fusion Apothecary
                                                 </TransitionLink>
                                             </li>
                                             <li className='w-full'>
                                                 <TransitionLink href={`/wellness/${products[2].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center px-4 py-2">
                                                     BioPrint
+                                                </TransitionLink>
+                                            </li>
+                                            <li className='w-full'>
+                                                <TransitionLink href={`/wellness/${products[5].name}`} className="block rounded-xl duration-500 text-whiteColor font-semibold w-full text-center px-4 py-2">
+                                                    DNA Life
                                                 </TransitionLink>
                                             </li>
                                         </ul>
