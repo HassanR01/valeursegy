@@ -1,6 +1,6 @@
 import ImpactPage from '@/app/components/impacts/ImpactPage'
-import Footer from '@/app/components/main/Footer'
-import Header from '@/app/components/main/Header'
+import FooterAr from '@/app/components/main/FooterAr'
+import HeaderAr from '@/app/components/main/HeaderAr'
 import TitleSection from '@/app/components/main/TitleSection'
 import React from 'react'
 
@@ -25,10 +25,10 @@ export default async function page({ params }) {
 
   return (
     <>
-      <Header translate={`/social-impact/${impactTitle}`} />
+      <HeaderAr translate={`/social-impact/${impactTitle}`} />
       <TitleSection title={impact.title} />
-      <ImpactPage impact={impact} lang={'en'} />
-      <Footer />
+      <ImpactPage impact={impact} lang={'ar'} />
+      <FooterAr />
     </>
   )
 }
