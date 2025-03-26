@@ -1,3 +1,7 @@
+import BlogPage from '@/app/components/blogs/BlogPage'
+import FooterAr from '@/app/components/main/FooterAr'
+import HeaderAr from '@/app/components/main/HeaderAr'
+import TitleSection from '@/app/components/main/TitleSection'
 import React from 'react'
 
 
@@ -38,10 +42,16 @@ export async function generateMetadata({ params }) {
 }
 
 
-export default function page({ params }) {
+export default async function page({ params }) {
   const { blogTitle } = params
+  const { blog } = await GetBlog(blogTitle)
 
   return (
-    <div>page</div>
+    <>
+      <HeaderAr translate={`/blogs/${blogTitle}`} />
+      <TitleSection title={blog.titleAr} />
+      <BlogPage blog={blog} lang={'ar'} />
+      <FooterAr />
+    </>
   )
 }

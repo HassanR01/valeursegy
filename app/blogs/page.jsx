@@ -24,7 +24,7 @@ export default function page() {
     <>
       <Header translate={'/ar/blogs'} />
       <TitleSection title={`Medical Blogs`} />
-      <section className='min-h-screen w-full flex flex-col items-center justify-center'>
+      <section className='min-h-screen w-full flex flex-col items-center justify-start'>
           <BlogsList />
       </section>
       <Footer />

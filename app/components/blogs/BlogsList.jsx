@@ -6,11 +6,7 @@ import TransitionLink from '../main/TransitionLink'
 import { useDataContext } from '../Context/DataContext'
 
 export default function BlogsList({ lang }) {
-    const [isloading, setIsloading] = useState(true)
-
     const { blogs } = useDataContext()
-
-
 
     if (blogs) {
         return (
@@ -29,7 +25,6 @@ export default function BlogsList({ lang }) {
                 </div>
             </>
         )
-
     } else {
         return (
             <Loading />

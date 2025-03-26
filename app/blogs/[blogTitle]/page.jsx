@@ -45,7 +45,7 @@ export default async function page({ params }) {
   return (
     <>
       <Header translate={`/ar/blogs/${blogTitle}`} />
-      <TitleSection title={blog.title} description={blog.description} />
+      <TitleSection title={blog.title} />
       <BlogPage blog={blog} lang={'en'} />
       <Footer  />
     </>
