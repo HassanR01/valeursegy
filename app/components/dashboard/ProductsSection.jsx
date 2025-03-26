@@ -53,7 +53,6 @@ export default function ProductsSection({ products }) {
     setSections(updateSections)
   }
 
-
   const updateSectionsAr = () => {
     if (subTitleAr && textAr) {
       if (editSectionAr) {
